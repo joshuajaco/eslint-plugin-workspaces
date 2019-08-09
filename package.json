@@ -1,11 +1,7 @@
 {
   "name": "eslint-plugin-workspaces",
   "version": "0.0.1",
-  "keywords": [
-    "eslint",
-    "eslintplugin",
-    "eslint-plugin"
-  ],
+  "license": "MIT",
   "main": "lib/index.js",
   "scripts": {
     "format": "prettier --write '**/*.js' --ignore-path .gitignore"
@@ -16,5 +12,10 @@
   },
   "devDependencies": {
     "prettier": "^1.18.2"
-  }
+  },
+  "keywords": [
+    "eslint",
+    "eslintplugin",
+    "eslint-plugin"
+  ]
 }
