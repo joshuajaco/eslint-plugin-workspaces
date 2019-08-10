@@ -4,7 +4,7 @@ const { RuleTester } = require('eslint');
 
 RuleTester.setDefaultConfig({
   parserOptions: {
-    ecmaVersion: 2017,
+    ecmaVersion: 2019,
     sourceType: 'module',
   },
 });
