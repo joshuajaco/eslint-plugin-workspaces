@@ -2,6 +2,10 @@
 # yarn lockfile v1
 
 
+"@joshuajaco/prettier-config@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@joshuajaco/prettier-config/-/prettier-config-1.0.1.tgz#032c8f8875b6289ad53f0245c92a8da2bc4618ee"
+
 array-union@^1.0.1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/array-union/-/array-union-1.0.2.tgz#9a34410e4f4e3da23dea375be5be70f24778ec39"

@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "license": "MIT",
   "main": "lib/index.js",
+  "prettier": "@joshuajaco/prettier-config",
   "scripts": {
     "format": "prettier --write '**/*.js' --ignore-path .gitignore"
   },
@@ -11,6 +12,7 @@
     "get-monorepo-packages": "^1.2.0"
   },
   "devDependencies": {
+    "@joshuajaco/prettier-config": "^1.0.1",
     "prettier": "^1.18.2"
   },
   "keywords": [
