@@ -5,7 +5,7 @@
   "main": "lib/index.js",
   "prettier": "@joshuajaco/prettier-config",
   "scripts": {
-    "format": "prettier --write '**/*.js' --ignore-path .gitignore"
+    "format": "prettier --write '**/*.{js,json}' --ignore-path .gitignore"
   },
   "dependencies": {
     "escape-string-regexp": "^2.0.0",
