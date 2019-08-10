@@ -1,8 +1,13 @@
 {
   "name": "eslint-plugin-workspaces",
   "version": "0.0.1",
-  "license": "MIT",
   "main": "lib/index.js",
+  "license": "MIT",
+  "keywords": [
+    "eslint",
+    "eslintplugin",
+    "eslint-plugin"
+  ],
   "prettier": "@joshuajaco/prettier-config",
   "scripts": {
     "format": "prettier --write '**/*.{js,json}' --ignore-path .gitignore"
@@ -14,10 +19,5 @@
   "devDependencies": {
     "@joshuajaco/prettier-config": "^1.0.1",
     "prettier": "^1.18.2"
-  },
-  "keywords": [
-    "eslint",
-    "eslintplugin",
-    "eslint-plugin"
-  ]
+  }
 }
