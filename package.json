@@ -10,7 +10,7 @@
   ],
   "prettier": "@joshuajaco/prettier-config",
   "scripts": {
-    "format": "prettier --write '**/*.{js,json}' --ignore-path .gitignore",
+    "format": "prettier --write \"**/*.{js,json}\" --ignore-path .gitignore",
     "test": "mocha tests --recursive --file tests/setup.js"
   },
   "dependencies": {
