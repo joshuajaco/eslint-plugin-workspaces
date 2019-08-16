@@ -23,7 +23,6 @@
     "lint:fix": "yarn lint --fix"
   },
   "dependencies": {
-    "escape-string-regexp": "^2.0.0",
     "get-monorepo-packages": "^1.2.0"
   },
   "devDependencies": {
