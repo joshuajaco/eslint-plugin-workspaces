@@ -19,7 +19,8 @@
   "scripts": {
     "format": "prettier --write \"**/*.{js,json}\" --ignore-path .gitignore",
     "test": "mocha tests --recursive --file tests/setup.js",
-    "lint": "eslint . --ignore-path .gitignore"
+    "lint": "eslint . --ignore-path .gitignore",
+    "lint:fix": "yarn lint --fix"
   },
   "dependencies": {
     "escape-string-regexp": "^2.0.0",
