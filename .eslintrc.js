@@ -14,6 +14,7 @@ module.exports = {
   rules: {
     'arrow-body-style': 'error',
     'no-use-before-define': 'error',
+    'strict': 'error',
     'node/prefer-global/buffer': 'error',
     'node/prefer-global/console': 'error',
     'node/prefer-global/process': 'error',
