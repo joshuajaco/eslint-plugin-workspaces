@@ -3,10 +3,7 @@
 const { RuleTester } = require('eslint');
 
 RuleTester.setDefaultConfig({
-  parserOptions: {
-    ecmaVersion: 2019,
-    sourceType: 'module',
-  },
+  parser: require.resolve('babel-eslint'),
 });
 
 module.exports = new RuleTester();
