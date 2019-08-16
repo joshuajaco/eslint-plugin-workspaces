@@ -5,7 +5,7 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 2019,
   },
-  plugins: ['node', 'eslint-plugin'],
+  plugins: ['node', 'eslint-plugin', 'prettier'],
   extends: [
     'eslint:recommended',
     'plugin:node/recommended',
@@ -14,7 +14,7 @@ module.exports = {
   rules: {
     'arrow-body-style': 'error',
     'no-use-before-define': 'error',
-    'strict': 'error',
+    strict: 'error',
     'node/prefer-global/buffer': 'error',
     'node/prefer-global/console': 'error',
     'node/prefer-global/process': 'error',
@@ -28,5 +28,6 @@ module.exports = {
           'https://github.com/joshuajaco/eslint-plugin-workspaces/docs/rules/{{name}}.md',
       },
     ],
+    'prettier/prettier': 'error',
   },
 };
