@@ -8,10 +8,18 @@
     "eslintplugin",
     "eslint-plugin"
   ],
+  "files": [
+    "lib/",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=8.10.0"
+  },
   "prettier": "@joshuajaco/prettier-config",
   "scripts": {
     "format": "prettier --write \"**/*.{js,json}\" --ignore-path .gitignore",
-    "test": "mocha tests --recursive --file tests/setup.js"
+    "test": "mocha tests --recursive --file tests/setup.js",
+    "lint": "eslint . --ignore-path .gitignore"
   },
   "dependencies": {
     "escape-string-regexp": "^2.0.0",
@@ -20,6 +28,8 @@
   "devDependencies": {
     "@joshuajaco/prettier-config": "^1.0.1",
     "eslint": "^6.1.0",
+    "eslint-plugin-eslint-plugin": "^2.1.0",
+    "eslint-plugin-node": "^9.1.0",
     "mocha": "^6.2.0",
     "mock-require": "^3.0.3",
     "prettier": "^1.18.2"
