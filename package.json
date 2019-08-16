@@ -18,7 +18,7 @@
   "prettier": "@joshuajaco/prettier-config",
   "scripts": {
     "format": "prettier --write \"**/*.{js,json}\" --ignore-path .gitignore",
-    "test": "mocha tests --recursive --file tests/setup.js",
+    "test": "yarn lint && mocha tests --recursive --file tests/setup.js",
     "lint": "eslint . --ignore-path .gitignore",
     "lint:fix": "yarn lint --fix"
   },
