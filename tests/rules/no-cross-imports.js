@@ -10,6 +10,7 @@ ruleTester.run('no-cross-imports', rule, {
     "import('module');",
     "import 'module';",
     "import '../some/relative/path';",
+    'someFunction();',
     {
       options: [{ allow: '@test/workspace' }],
       filename: '/some/path',

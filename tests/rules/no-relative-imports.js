@@ -10,6 +10,7 @@ ruleTester.run('no-relative-imports', rule, {
     "import('@test/workspace');",
     "import '@test/workspace';",
     "import '../some/relative/path';",
+    'someFunction();',
     {
       filename: '/test/workspace',
       code: "import '../workspace';",
