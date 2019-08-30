@@ -13,20 +13,20 @@ ruleTester.run('no-cross-imports', rule, {
     'someFunction();',
     {
       options: [{ allow: '@test/workspace' }],
-      filename: '/some/path',
+      filename: '/some/path.js',
       code: "import '@test/workspace';",
     },
     {
       options: [{ allow: ['@test/workspace', '@test/another-workspace'] }],
-      filename: '/some/path',
+      filename: '/some/path.js',
       code: "import '@test/workspace';import '@test/another-workspace';",
     },
     {
-      filename: '/test/workspace',
+      filename: '/test/workspace/test.js',
       code: "import '@test/workspace';",
     },
     {
-      filename: '/test/workspace',
+      filename: '/test/workspace/test.js',
       code: "import './some/thing'",
     },
   ],
@@ -34,7 +34,7 @@ ruleTester.run('no-cross-imports', rule, {
   invalid: [
     {
       code: "import workspace from '@test/workspace';",
-      filename: '/some/path',
+      filename: '/some/path.js',
       errors: [
         {
           message: 'Import from package "@test/workspace" is not allowed',
@@ -43,7 +43,7 @@ ruleTester.run('no-cross-imports', rule, {
     },
     {
       code: "import('@test/workspace');",
-      filename: '/some/path',
+      filename: '/some/path.js',
       errors: [
         {
           message: 'Import from package "@test/workspace" is not allowed',
@@ -52,7 +52,7 @@ ruleTester.run('no-cross-imports', rule, {
     },
     {
       code: "require('@test/workspace');",
-      filename: '/some/path',
+      filename: '/some/path.js',
       errors: [
         {
           message: 'Import from package "@test/workspace" is not allowed',
@@ -61,7 +61,7 @@ ruleTester.run('no-cross-imports', rule, {
     },
     {
       code: "import workspace from '@test/workspace';",
-      filename: '/some/path',
+      filename: '/some/path.js',
       errors: [
         {
           message: 'Import from package "@test/workspace" is not allowed',
@@ -70,7 +70,7 @@ ruleTester.run('no-cross-imports', rule, {
     },
     {
       code: "import '@test/workspace';",
-      filename: '/some/path',
+      filename: '/some/path.js',
       errors: [
         {
           message: 'Import from package "@test/workspace" is not allowed',
@@ -79,7 +79,7 @@ ruleTester.run('no-cross-imports', rule, {
     },
     {
       code: "import '@test/workspace/some/path';",
-      filename: '/some/path',
+      filename: '/some/path.js',
       errors: [
         {
           message: 'Import from package "@test/workspace" is not allowed',
@@ -88,7 +88,7 @@ ruleTester.run('no-cross-imports', rule, {
     },
     {
       code: "import '../../test/workspace';",
-      filename: '/some/path',
+      filename: '/some/path.js',
       errors: [
         {
           message: 'Import from package "@test/workspace" is not allowed',
@@ -97,7 +97,7 @@ ruleTester.run('no-cross-imports', rule, {
     },
     {
       code: "import '../../test/workspace/some/path';",
-      filename: '/some/path',
+      filename: '/some/path.js',
       errors: [
         {
           message: 'Import from package "@test/workspace" is not allowed',
@@ -106,7 +106,7 @@ ruleTester.run('no-cross-imports', rule, {
     },
     {
       code: "import '@test/workspace';import '@test/another-workspace';",
-      filename: '/some/path',
+      filename: '/some/path.js',
       errors: [
         {
           message: 'Import from package "@test/workspace" is not allowed',
@@ -120,7 +120,7 @@ ruleTester.run('no-cross-imports', rule, {
     {
       code: "import '@test/workspace';import '@test/another-workspace';",
       options: [{ allow: '@test/workspace' }],
-      filename: '/some/path',
+      filename: '/some/path.js',
       errors: [
         {
           message:
@@ -130,11 +130,21 @@ ruleTester.run('no-cross-imports', rule, {
     },
     {
       options: [{ allow: '@test/workspacetest' }],
-      filename: '/some/path',
+      filename: '/some/path.js',
       code: "import '@test/workspace';",
       errors: [
         {
           message: 'Import from package "@test/workspace" is not allowed',
+        },
+      ],
+    },
+    {
+      filename: '/test/workspace/test.js',
+      code: "import '../another-workspace/test'",
+      errors: [
+        {
+          message:
+            'Import from package "@test/another-workspace" is not allowed',
         },
       ],
     },

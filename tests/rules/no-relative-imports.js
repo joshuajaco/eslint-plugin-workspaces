@@ -12,15 +12,15 @@ ruleTester.run('no-relative-imports', rule, {
     "import '../some/relative/path';",
     'someFunction();',
     {
-      filename: '/test/workspace',
+      filename: '/test/workspace/test.js',
       code: "import '../workspace';",
     },
     {
-      filename: '/test/workspace',
+      filename: '/test/workspace/test.js',
       code: "import './some/path';",
     },
     {
-      filename: '/test/workspace/some/path',
+      filename: '/test/workspace/some/path.js',
       code: "import '../another/path';",
     },
   ],
@@ -28,7 +28,7 @@ ruleTester.run('no-relative-imports', rule, {
   invalid: [
     {
       code: "import workspace from '../../test/workspace';",
-      filename: '/some/path',
+      filename: '/some/path.js',
       output: "import workspace from '@test/workspace';",
       errors: [
         {
@@ -38,7 +38,7 @@ ruleTester.run('no-relative-imports', rule, {
     },
     {
       code: "require('../../test/workspace');",
-      filename: '/some/path',
+      filename: '/some/path.js',
       output: "require('@test/workspace');",
       errors: [
         {
@@ -48,7 +48,7 @@ ruleTester.run('no-relative-imports', rule, {
     },
     {
       code: "import('../../test/workspace');",
-      filename: '/some/path',
+      filename: '/some/path.js',
       output: "import('@test/workspace');",
       errors: [
         {
@@ -58,7 +58,7 @@ ruleTester.run('no-relative-imports', rule, {
     },
     {
       code: "import '../../test/workspace';",
-      filename: '/some/path',
+      filename: '/some/path.js',
       output: "import '@test/workspace';",
       errors: [
         {
@@ -68,7 +68,7 @@ ruleTester.run('no-relative-imports', rule, {
     },
     {
       code: "import workspace from '../another-workspace';",
-      filename: '/test/workspace',
+      filename: '/test/workspace/test.js',
       output: "import workspace from '@test/another-workspace';",
       errors: [
         {
@@ -78,7 +78,7 @@ ruleTester.run('no-relative-imports', rule, {
     },
     {
       code: "import workspace from '../another-workspace/testing';",
-      filename: '/test/workspace',
+      filename: '/test/workspace/test.js',
       output: "import workspace from '@test/another-workspace/testing';",
       errors: [
         {
