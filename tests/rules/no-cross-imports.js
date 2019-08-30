@@ -21,6 +21,14 @@ ruleTester.run('no-cross-imports', rule, {
       filename: '/some/path',
       code: "import '@test/workspace';import '@test/another-workspace';",
     },
+    {
+      filename: '/test/workspace',
+      code: "import '@test/workspace';",
+    },
+    {
+      filename: '/test/workspace',
+      code: "import './some/thing'",
+    },
   ],
 
   invalid: [
