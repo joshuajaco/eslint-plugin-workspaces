@@ -119,5 +119,15 @@ ruleTester.run('no-cross-imports', rule, {
         },
       ],
     },
+    {
+      options: [{ allow: '@test/workspacetest' }],
+      filename: '/some/path',
+      code: "import '@test/workspace';",
+      errors: [
+        {
+          message: 'Import from package "@test/workspace" is not allowed',
+        },
+      ],
+    },
   ],
 });
