@@ -28,6 +28,7 @@ ruleTester.run('no-relative-imports', rule, {
     {
       code: "import workspace from '../../test/workspace';",
       filename: '/some/path',
+      output: "import workspace from '@test/workspace';",
       errors: [
         {
           message: 'Relative imports of other packages are not allowed',
@@ -37,6 +38,7 @@ ruleTester.run('no-relative-imports', rule, {
     {
       code: "require('../../test/workspace');",
       filename: '/some/path',
+      output: "require('@test/workspace');",
       errors: [
         {
           message: 'Relative imports of other packages are not allowed',
@@ -46,6 +48,7 @@ ruleTester.run('no-relative-imports', rule, {
     {
       code: "import('../../test/workspace');",
       filename: '/some/path',
+      output: "import('@test/workspace');",
       errors: [
         {
           message: 'Relative imports of other packages are not allowed',
@@ -55,6 +58,7 @@ ruleTester.run('no-relative-imports', rule, {
     {
       code: "import '../../test/workspace';",
       filename: '/some/path',
+      output: "import '@test/workspace';",
       errors: [
         {
           message: 'Relative imports of other packages are not allowed',
@@ -64,6 +68,7 @@ ruleTester.run('no-relative-imports', rule, {
     {
       code: "import workspace from '../another-workspace';",
       filename: '/test/workspace',
+      output: "import workspace from '@test/another-workspace';",
       errors: [
         {
           message: 'Relative imports of other packages are not allowed',
@@ -73,6 +78,7 @@ ruleTester.run('no-relative-imports', rule, {
     {
       code: "import workspace from '../another-workspace/testing';",
       filename: '/test/workspace',
+      output: "import workspace from '@test/another-workspace/testing';",
       errors: [
         {
           message: 'Relative imports of other packages are not allowed',
