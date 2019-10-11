@@ -11,6 +11,7 @@ ruleTester.run('no-cross-imports', rule, {
     "import 'module';",
     "import '../some/relative/path';",
     'someFunction();',
+    'let a;',
     {
       options: [{ allow: '@test/workspace' }],
       filename: '/some/path.js',
