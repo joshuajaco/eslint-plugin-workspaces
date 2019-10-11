@@ -21,7 +21,7 @@ ruleTester.run('require-dependency', rule, {
       errors: [
         {
           message:
-            'Importing packages without listing them as dependency is not allowed',
+            'Importing from another workspace without listing it as a dependency is not allowed',
         },
       ],
     },
