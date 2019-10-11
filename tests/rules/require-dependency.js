@@ -9,6 +9,10 @@ ruleTester.run('require-dependency', rule, {
       filename: '/test/another-workspace/index.js',
       code: "import '../workspace';",
     },
+    {
+      filename: '/index.js',
+      code: "import '../workspace';",
+    },
   ],
   invalid: [
     {
