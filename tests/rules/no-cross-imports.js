@@ -51,7 +51,25 @@ ruleTester.run('no-cross-imports', rule, {
       ],
     },
     {
+      code: "const test = import('@test/workspace');",
+      filename: '/some/path.js',
+      errors: [
+        {
+          message: 'Import from package "@test/workspace" is not allowed',
+        },
+      ],
+    },
+    {
       code: "require('@test/workspace');",
+      filename: '/some/path.js',
+      errors: [
+        {
+          message: 'Import from package "@test/workspace" is not allowed',
+        },
+      ],
+    },
+    {
+      code: "const test = require('@test/workspace');",
       filename: '/some/path.js',
       errors: [
         {
