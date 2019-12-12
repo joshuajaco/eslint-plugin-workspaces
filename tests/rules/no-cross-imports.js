@@ -61,6 +61,15 @@ ruleTester.run('no-cross-imports', rule, {
       ],
     },
     {
+      code: "async () => await import('@test/workspace');",
+      filename: '/some/path.js',
+      errors: [
+        {
+          message: 'Import from package "@test/workspace" is not allowed',
+        },
+      ],
+    },
+    {
       code: "require('@test/workspace');",
       filename: '/some/path.js',
       errors: [

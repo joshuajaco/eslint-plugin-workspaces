@@ -57,6 +57,16 @@ ruleTester.run('no-relative-imports', rule, {
       ],
     },
     {
+      code: "async () => await import('../../test/workspace');",
+      filename: '/some/path.js',
+      output: "async () => await import('@test/workspace');",
+      errors: [
+        {
+          message: 'Relative imports of other packages are not allowed',
+        },
+      ],
+    },
+    {
       code: "import '../../test/workspace';",
       filename: '/some/path.js',
       output: "import '@test/workspace';",

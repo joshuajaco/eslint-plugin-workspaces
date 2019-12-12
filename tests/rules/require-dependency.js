@@ -26,8 +26,18 @@ ruleTester.run('require-dependency', rule, {
       ],
     },
     {
-      filename: '/test/workspace/pimmelkaka.js',
+      filename: '/test/workspace/other.js',
       code: "import('../another-workspace');",
+      errors: [
+        {
+          message:
+            'Importing from another workspace without listing it as a dependency is not allowed',
+        },
+      ],
+    },
+    {
+      filename: '/test/workspace/other.js',
+      code: "async () => await import('../another-workspace');",
       errors: [
         {
           message:
