@@ -30,6 +30,10 @@ ruleTester.run('no-cross-imports', rule, {
       filename: '/test/workspace/test.js',
       code: "import './some/thing'",
     },
+    {
+      filename: '/test/workspace/test.js',
+      code: 'require(undefined)',
+    },
   ],
 
   invalid: [

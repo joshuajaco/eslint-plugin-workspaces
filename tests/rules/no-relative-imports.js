@@ -23,6 +23,10 @@ ruleTester.run('no-relative-imports', rule, {
       filename: '/test/workspace/some/path.js',
       code: "import '../another/path';",
     },
+    {
+      filename: '/test/workspace/test.js',
+      code: 'require(undefined)',
+    },
   ],
 
   invalid: [
