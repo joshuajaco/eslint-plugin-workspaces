@@ -21,6 +21,7 @@ module.exports = {
     'node/prefer-global/text-decoder': 'error',
     'node/prefer-global/url': 'error',
     'node/prefer-global/url-search-params': 'error',
+    'eslint-plugin/require-meta-docs-description': 'off',
     'eslint-plugin/require-meta-docs-url': [
       'error',
       {
