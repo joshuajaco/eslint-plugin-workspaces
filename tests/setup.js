@@ -16,4 +16,10 @@ mock('get-monorepo-packages', () => [
       dependencies: { '@test/workspace': '^1.0.0' },
     },
   },
+  {
+    location: '/test/third-workspace',
+    package: {
+      name: '@test/third-workspace',
+    },
+  },
 ]);

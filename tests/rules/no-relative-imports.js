@@ -27,12 +27,15 @@ ruleTester.run('no-relative-imports', rule, {
       filename: '/test/workspace/test.js',
       code: 'require(undefined)',
     },
+    {
+      filename: '/some/file.js',
+      code: "import '../test/workspace';",
+    },
   ],
-
   invalid: [
     {
       code: "import workspace from '../../test/workspace';",
-      filename: '/some/path.js',
+      filename: '/test/another-workspace/test.js',
       output: "import workspace from '@test/workspace';",
       errors: [
         {
@@ -42,7 +45,7 @@ ruleTester.run('no-relative-imports', rule, {
     },
     {
       code: "require('../../test/workspace');",
-      filename: '/some/path.js',
+      filename: '/test/another-workspace/test.js',
       output: "require('@test/workspace');",
       errors: [
         {
@@ -52,7 +55,7 @@ ruleTester.run('no-relative-imports', rule, {
     },
     {
       code: "import('../../test/workspace');",
-      filename: '/some/path.js',
+      filename: '/test/another-workspace/test.js',
       output: "import('@test/workspace');",
       errors: [
         {
@@ -62,7 +65,7 @@ ruleTester.run('no-relative-imports', rule, {
     },
     {
       code: "async () => await import('../../test/workspace');",
-      filename: '/some/path.js',
+      filename: '/test/another-workspace/test.js',
       output: "async () => await import('@test/workspace');",
       errors: [
         {
@@ -72,7 +75,7 @@ ruleTester.run('no-relative-imports', rule, {
     },
     {
       code: "import '../../test/workspace';",
-      filename: '/some/path.js',
+      filename: '/test/another-workspace/test.js',
       output: "import '@test/workspace';",
       errors: [
         {
