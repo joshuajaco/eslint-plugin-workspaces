@@ -22,7 +22,7 @@
   },
   "prettier": "@joshuajaco/prettier-config",
   "scripts": {
-    "format": "prettier --write \"**/*.{js,json}\" --ignore-path .gitignore",
+    "format": "prettier --write \"**/*.{js,json,md,yml}\" --ignore-path .gitignore",
     "test": "yarn lint && mocha tests --recursive --file tests/setup.js",
     "lint": "eslint . --ignore-path .gitignore",
     "lint:fix": "yarn lint --fix"
