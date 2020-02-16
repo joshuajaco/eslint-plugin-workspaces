@@ -23,7 +23,9 @@
   "prettier": "@joshuajaco/prettier-config",
   "scripts": {
     "format": "prettier --write \"**/*.{js,json,md,yml}\" --ignore-path .gitignore",
-    "test": "yarn lint && mocha tests --recursive --file tests/setup.js",
+    "mocha": "mocha tests --recursive --file tests/setup.js",
+    "test": "yarn lint && nyc yarn mocha",
+    "coverage": "nyc report --reporter=text-lcov | coveralls",
     "lint": "eslint . --ignore-path .gitignore",
     "lint:fix": "yarn lint --fix"
   },
@@ -33,12 +35,14 @@
   "devDependencies": {
     "@joshuajaco/prettier-config": "^1.0.1",
     "babel-eslint": "^10.0.3",
+    "coveralls": "^3.0.9",
     "eslint": "^6.8.0",
     "eslint-plugin-eslint-plugin": "^2.2.1",
     "eslint-plugin-node": "^11.0.0",
     "eslint-plugin-prettier": "^3.1.2",
     "mocha": "^7.0.1",
     "mock-require": "^3.0.3",
+    "nyc": "^15.0.0",
     "prettier": "^1.19.1"
   }
 }

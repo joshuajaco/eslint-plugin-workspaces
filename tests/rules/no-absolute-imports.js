@@ -100,5 +100,16 @@ ruleTester.run('no-absolute-imports', rule, {
         },
       ],
     },
+    {
+      code: "import '@test/workspace';",
+      filename: '/test/workspace/file.js',
+      output: "import '.';",
+      errors: [
+        {
+          message:
+            'Absolute imports within the current package are not allowed',
+        },
+      ],
+    },
   ],
 });

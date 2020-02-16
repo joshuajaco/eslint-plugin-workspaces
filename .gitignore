@@ -1,6 +1,7 @@
 node_modules
 .idea
 .DS_Store
+.nyc_output
 *.swp
 npm-debug.log*
 yarn-debug.log*
