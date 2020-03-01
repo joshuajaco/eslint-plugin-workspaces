@@ -7,7 +7,12 @@
   "keywords": [
     "eslint",
     "eslintplugin",
-    "eslint-plugin"
+    "eslint-plugin",
+    "monorepo",
+    "packages",
+    "workspaces",
+    "yarn",
+    "lerna"
   ],
   "files": [
     "lib/",
