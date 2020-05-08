@@ -134,10 +134,10 @@
   resolved "https://registry.yarnpkg.com/@istanbuljs/schema/-/schema-0.1.2.tgz#26520bf09abe4a5644cd5414e37125a8954241dd"
   integrity sha512-tsAQNx32a8CoFhjhijUIhI4kccIAgmGhy8LZMZgGfmXcpMbPRUqn5LWmgRttILi6yeGmBJd2xsPkFMs0PzgPCw==
 
-"@joshuajaco/prettier-config@^1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@joshuajaco/prettier-config/-/prettier-config-1.0.1.tgz#032c8f8875b6289ad53f0245c92a8da2bc4618ee"
-  integrity sha512-8IcGys3/TiSx+6IgDPos20jsOAiqIhvisxbR6R/KRX+UMpslHj3IX2Djd2tj20ZL+IloRZixBBKPR+FNjJAC8g==
+"@joshuajaco/prettier-config@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@joshuajaco/prettier-config/-/prettier-config-2.0.0.tgz#aad08e8f7c670d3c3ab820bb3b647ca757fb06f7"
+  integrity sha512-r7im+QsKFZkgtAT+MlVBDa/o4nvGL+93hfvFCdqjtaChIWiRl/Nq2JSfm6isj/eKWKn1E3Pe1VC/7vt0tQOjCw==
 
 "@types/color-name@^1.1.1":
   version "1.1.1"
