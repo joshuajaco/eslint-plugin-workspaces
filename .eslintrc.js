@@ -5,7 +5,7 @@ module.exports = {
     node: 1,
   },
   parserOptions: {
-    ecmaVersion: 2019,
+    ecmaVersion: 2020,
   },
   plugins: ['node', 'eslint-plugin', 'prettier'],
   extends: [
