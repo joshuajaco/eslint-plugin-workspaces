@@ -40,6 +40,7 @@
   },
   "devDependencies": {
     "@joshuajaco/prettier-config": "^2.0.0",
+    "@typescript-eslint/parser": "^3.3.0",
     "babel-eslint": "^10.1.0",
     "coveralls": "^3.1.0",
     "eslint": "^7.2.0",
@@ -49,6 +50,7 @@
     "mocha": "^8.0.1",
     "mock-require": "^3.0.3",
     "nyc": "^15.1.0",
-    "prettier": "^2.0.5"
+    "prettier": "^2.0.5",
+    "typescript": "^3.9.5"
   }
 }

@@ -3,7 +3,23 @@
 const { RuleTester } = require('eslint');
 
 RuleTester.setDefaultConfig({
-  parser: require.resolve('babel-eslint'),
+  parserOptions: {
+    ecmaVersion: 2019,
+    sourceType: 'module',
+  },
 });
 
-module.exports = new RuleTester();
+const babelTester = new RuleTester();
+babelTester.testerConfig.parser = require.resolve('babel-eslint');
+
+const typescriptTester = new RuleTester();
+typescriptTester.testerConfig.parser = require.resolve(
+  '@typescript-eslint/parser',
+);
+
+module.exports = {
+  run: (...args) => {
+    babelTester.run(...args);
+    typescriptTester.run(...args);
+  },
+};
