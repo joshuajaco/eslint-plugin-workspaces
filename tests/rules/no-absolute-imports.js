@@ -17,6 +17,10 @@ ruleTester.run('no-absolute-imports', rule, {
     },
     {
       filename: '/test/workspace/test.js',
+      code: 'import(`/some/path/${someVar}`);',
+    },
+    {
+      filename: '/test/workspace/test.js',
       code: "import './some/path';",
     },
     {
