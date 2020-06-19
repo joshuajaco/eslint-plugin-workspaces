@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-workspaces",
-  "version": "0.5.3",
+  "version": "0.5.4",
   "main": "lib/index.js",
   "license": "MIT",
   "author": "Joshua Jacobowitz <joshua.jacobowitz@yahoo.de>",
