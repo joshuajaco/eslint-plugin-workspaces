@@ -1,9 +1,11 @@
+'use strict';
+
 module.exports = {
   env: {
     node: 1,
   },
   parserOptions: {
-    ecmaVersion: 2019,
+    ecmaVersion: 2020,
   },
   plugins: ['node', 'eslint-plugin', 'prettier'],
   extends: [
