@@ -16,6 +16,7 @@
   ],
   "files": [
     "lib/",
+    "CHANGELOG.md",
     "README.md",
     "LICENSE"
   ],
