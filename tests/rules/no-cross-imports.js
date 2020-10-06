@@ -38,6 +38,10 @@ ruleTester.run('no-cross-imports', rule, {
       filename: '/some/file.js',
       code: "import '@test/workspace';",
     },
+    {
+      filename: '/test/scope/workspace/file.js',
+      code: "import '@test/shared-in-scope';",
+    },
   ],
 
   invalid: [
@@ -181,6 +185,16 @@ ruleTester.run('no-cross-imports', rule, {
         {
           message:
             'Import from package "@test/another-workspace" is not allowed',
+        },
+      ],
+    },
+    {
+      filename: '/test/scope/workspace/file.js',
+      code: "import '@test/shared-outside-scope';",
+      errors: [
+        {
+          message:
+            'Import from package "@test/shared-outside-scope" is not allowed',
         },
       ],
     },

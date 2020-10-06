@@ -22,4 +22,22 @@ mock('get-monorepo-packages', () => [
       name: '@test/third-workspace',
     },
   },
+  {
+    location: '/test/scope/shared',
+    package: {
+      name: '@test/shared-in-scope',
+    },
+  },
+  {
+    location: '/test/other-scope/shared',
+    package: {
+      name: '@test/shared-outside-scope',
+    },
+  },
+  {
+    location: '/test/scope/workspace',
+    package: {
+      name: '@test/scoped-workspace',
+    },
+  },
 ]);
