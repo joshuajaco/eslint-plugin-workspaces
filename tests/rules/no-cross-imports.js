@@ -39,6 +39,17 @@ ruleTester.run('no-cross-imports', rule, {
       code: "import '@test/workspace';",
     },
     {
+      options: [{ scopes: true }],
+      filename: '/test/scope/workspace/file.js',
+      code: "import '@test/shared-in-scope';",
+    },
+    {
+      options: [{ scopes: { enable: true } }],
+      filename: '/test/scope/workspace/file.js',
+      code: "import '@test/shared-in-scope';",
+    },
+    {
+      options: [{ scopes: { enable: true, folderName: 'shared' } }],
       filename: '/test/scope/workspace/file.js',
       code: "import '@test/shared-in-scope';",
     },
@@ -189,12 +200,32 @@ ruleTester.run('no-cross-imports', rule, {
       ],
     },
     {
+      options: [{ scopes: true }],
       filename: '/test/scope/workspace/file.js',
       code: "import '@test/shared-outside-scope';",
       errors: [
         {
           message:
             'Import from package "@test/shared-outside-scope" is not allowed',
+        },
+      ],
+    },
+    {
+      filename: '/test/scope/workspace/file.js',
+      code: "import '@test/shared-in-scope';",
+      errors: [
+        {
+          message: 'Import from package "@test/shared-in-scope" is not allowed',
+        },
+      ],
+    },
+    {
+      options: [{ scopes: { enable: true, folderName: 'something-else' } }],
+      filename: '/test/scope/workspace/file.js',
+      code: "import '@test/shared-in-scope';",
+      errors: [
+        {
+          message: 'Import from package "@test/shared-in-scope" is not allowed',
         },
       ],
     },
