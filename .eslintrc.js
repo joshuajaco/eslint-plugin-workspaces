@@ -3,6 +3,7 @@
 module.exports = {
   env: {
     node: 1,
+    mocha: 1,
   },
   parserOptions: {
     ecmaVersion: 2020,
