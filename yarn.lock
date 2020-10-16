@@ -192,6 +192,14 @@
   resolved "https://registry.yarnpkg.com/@istanbuljs/schema/-/schema-0.1.2.tgz#26520bf09abe4a5644cd5414e37125a8954241dd"
   integrity sha512-tsAQNx32a8CoFhjhijUIhI4kccIAgmGhy8LZMZgGfmXcpMbPRUqn5LWmgRttILi6yeGmBJd2xsPkFMs0PzgPCw==
 
+"@joshuajaco/get-monorepo-packages@^1.2.1":
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/@joshuajaco/get-monorepo-packages/-/get-monorepo-packages-1.2.1.tgz#070bdc4268f5e14d2dd593b02f32bc4c5601d06d"
+  integrity sha512-3I32bp/UB4UmLqEj/yrBEWTYuCzojn8nR34PZ9Jwb2OeHV95l4Kw0ax1xnnA4yYWU1E1krM2RIWghP3U725dGQ==
+  dependencies:
+    globby "^7.1.1"
+    load-json-file "^4.0.0"
+
 "@joshuajaco/prettier-config@^2.0.0":
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/@joshuajaco/prettier-config/-/prettier-config-2.0.0.tgz#aad08e8f7c670d3c3ab820bb3b647ca757fb06f7"
@@ -995,14 +1003,6 @@ get-caller-file@^2.0.1:
   version "2.0.5"
   resolved "https://registry.yarnpkg.com/get-caller-file/-/get-caller-file-2.0.5.tgz#4f94412a82db32f36e3b0b9741f8a97feb031f7e"
   integrity sha512-DyFP3BM/3YHTQOCUL/w0OZHR0lpKeGrxotcHWcqNEdnltqFwXVfhEBQ94eIo34AfQpo0rGki4cyIiftY06h2Fg==
-
-get-monorepo-packages@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/get-monorepo-packages/-/get-monorepo-packages-1.2.0.tgz#3eee88d30b11a5f65955dec6ae331958b2a168e4"
-  integrity sha512-aDP6tH+eM3EuVSp3YyCutOcFS4Y9AhRRH9FAd+cjtR/g63Hx+DCXdKoP1ViRPUJz5wm+BOEXB4FhoffGHxJ7jQ==
-  dependencies:
-    globby "^7.1.1"
-    load-json-file "^4.0.0"
 
 get-package-type@^0.1.0:
   version "0.1.0"

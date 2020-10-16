@@ -37,7 +37,7 @@
     "lint:fix": "yarn lint --fix"
   },
   "dependencies": {
-    "get-monorepo-packages": "^1.2.0"
+    "@joshuajaco/get-monorepo-packages": "^1.2.1"
   },
   "devDependencies": {
     "@joshuajaco/prettier-config": "^2.0.0",

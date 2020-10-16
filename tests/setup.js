@@ -2,7 +2,7 @@
 
 const mock = require('mock-require');
 
-mock('get-monorepo-packages', () => [
+mock('@joshuajaco/get-monorepo-packages', () => [
   {
     location: '/test/workspace',
     package: {
