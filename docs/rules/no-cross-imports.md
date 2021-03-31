@@ -70,7 +70,7 @@ project
           └─── login/
                └─── package.json
 ```
-                                                                         
+
 Now, we may want to share code across the packages in the `user-management`
 section (e.g. fetching the user object, user form components etc.). With scopes,
 i am always allowed to import from a package with a **special folder name**
