@@ -13,6 +13,10 @@ ruleTester.run('no-relative-imports', rule, {
     'someFunction();',
     {
       filename: '/test/workspace/test.js',
+      code: "import 'root';",
+    },
+    {
+      filename: '/test/workspace/test.js',
       code: "import '../workspace';",
     },
     {

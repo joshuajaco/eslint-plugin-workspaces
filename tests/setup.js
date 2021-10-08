@@ -40,4 +40,8 @@ mock('@joshuajaco/get-monorepo-packages', () => [
       name: '@test/scoped-workspace',
     },
   },
+  {
+    location: 'root',
+    package: { name: 'root' },
+  },
 ]);
