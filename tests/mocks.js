@@ -1,8 +1,6 @@
 'use strict';
 
-const mock = require('mock-require');
-
-mock('@joshuajaco/get-monorepo-packages', () => [
+module.exports.findWorkspaces = () => [
   {
     location: '/test/workspace',
     package: {
@@ -44,4 +42,4 @@ mock('@joshuajaco/get-monorepo-packages', () => [
     location: 'root',
     package: { name: 'root' },
   },
-]);
+];

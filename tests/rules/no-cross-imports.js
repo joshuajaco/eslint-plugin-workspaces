@@ -1,7 +1,11 @@
 'use strict';
 
+const proxyquire = require('proxyquire');
+const { findWorkspaces } = require('../mocks');
 const ruleTester = require('../ruleTester');
-const rule = require('../../lib/rules/no-cross-imports');
+const rule = proxyquire('../../lib/rules/no-cross-imports', {
+  'find-workspaces': { findWorkspaces },
+});
 
 ruleTester.run('no-cross-imports', rule, {
   valid: [

@@ -1,7 +1,11 @@
 'use strict';
 
+const proxyquire = require('proxyquire');
+const { findWorkspaces } = require('../mocks');
 const ruleTester = require('../ruleTester');
-const rule = require('../../lib/rules/no-relative-imports');
+const rule = proxyquire('../../lib/rules/no-relative-imports', {
+  'find-workspaces': { findWorkspaces },
+});
 
 ruleTester.run('no-relative-imports', rule, {
   valid: [

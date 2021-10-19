@@ -1,7 +1,11 @@
 'use strict';
 
+const proxyquire = require('proxyquire');
+const { findWorkspaces } = require('../mocks');
 const ruleTester = require('../ruleTester');
-const rule = require('../../lib/rules/require-dependency');
+const rule = proxyquire('../../lib/rules/require-dependency', {
+  'find-workspaces': { findWorkspaces },
+});
 
 ruleTester.run('require-dependency', rule, {
   valid: [
