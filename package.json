@@ -20,7 +20,7 @@
     "LICENSE"
   ],
   "engines": {
-    "node": ">=8.10.0"
+    "node": ">= 12.22.0"
   },
   "packageManager": "npm@8.1.4",
   "repository": "joshuajaco/eslint-plugin-workspaces",
