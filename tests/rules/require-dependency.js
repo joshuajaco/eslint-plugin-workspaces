@@ -1,11 +1,12 @@
 'use strict';
 
+const { findWorkspaces } = require('find-workspaces');
 const { ruleTester } = require('../ruleTester');
-const { stub, findWorkspaces } = require('../mocks');
+const { findWorkspacesMock } = require('../mocks');
 const rule = require('../../lib/rules/require-dependency');
 
 describe('require-dependency', () => {
-  before(() => stub.callsFake(findWorkspaces));
+  before(() => findWorkspaces.callsFake(findWorkspacesMock));
 
   ruleTester.run('require-dependency', rule, {
     valid: [
@@ -57,7 +58,7 @@ describe('require-dependency', () => {
   });
 
   describe('without workspaces', () => {
-    before(() => stub.callsFake(() => null));
+    before(() => findWorkspaces.callsFake(() => null));
 
     ruleTester.run('require-dependency', rule, {
       valid: ["import workspace from '@test/workspace';"],

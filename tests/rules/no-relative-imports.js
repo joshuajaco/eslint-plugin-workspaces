@@ -1,11 +1,12 @@
 'use strict';
 
+const { findWorkspaces } = require('find-workspaces');
 const { ruleTester } = require('../ruleTester');
-const { stub, findWorkspaces } = require('../mocks');
+const { findWorkspacesMock } = require('../mocks');
 const rule = require('../../lib/rules/no-relative-imports');
 
 describe('no-relative-imports', () => {
-  before(() => stub.callsFake(findWorkspaces));
+  before(() => findWorkspaces.callsFake(findWorkspacesMock));
 
   ruleTester.run('no-relative-imports', rule, {
     valid: [
@@ -115,7 +116,7 @@ describe('no-relative-imports', () => {
   });
 
   describe('without workspaces', () => {
-    before(() => stub.callsFake(() => null));
+    before(() => findWorkspaces.callsFake(() => null));
 
     ruleTester.run('no-relative-imports', rule, {
       valid: ["import workspace from '@test/workspace';"],

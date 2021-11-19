@@ -1,11 +1,12 @@
 'use strict';
 
+const { findWorkspaces } = require('find-workspaces');
 const { ruleTester } = require('../ruleTester');
-const { stub, findWorkspaces } = require('../mocks');
+const { findWorkspacesMock } = require('../mocks');
 const rule = require('../../lib/rules/no-cross-imports');
 
 describe('no-cross-imports', () => {
-  before(() => stub.callsFake(findWorkspaces));
+  before(() => findWorkspaces.callsFake(findWorkspacesMock));
 
   ruleTester.run('no-cross-imports', rule, {
     valid: [
@@ -239,7 +240,7 @@ describe('no-cross-imports', () => {
   });
 
   describe('without workspaces', () => {
-    before(() => stub.callsFake(() => null));
+    before(() => findWorkspaces.callsFake(() => null));
 
     ruleTester.run('no-cross-imports', rule, {
       valid: ["import workspace from '@test/workspace';"],

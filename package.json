@@ -29,7 +29,7 @@
     "format": "prettier . -w --ignore-path .gitignore",
     "lint": "eslint . --ignore-path .gitignore",
     "lint:fix": "npm run lint -- --fix",
-    "test": "npm run lint && nyc mocha tests --recursive",
+    "test": "npm run lint && nyc mocha tests --recursive --file tests/setup.js",
     "coverage": "mkdir -p coverage && touch ./coverage/lcov.info && nyc report --reporter=text-lcov > ./coverage/lcov.info"
   },
   "dependencies": {
