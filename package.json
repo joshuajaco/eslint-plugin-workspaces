@@ -34,7 +34,7 @@
     "lint:fix": "npm run lint --fix"
   },
   "dependencies": {
-    "find-workspaces": "^0.0.1"
+    "find-workspaces": "^0.0.2"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.16.3",
