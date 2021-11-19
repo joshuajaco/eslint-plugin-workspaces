@@ -6,4 +6,8 @@ RuleTester.setDefaultConfig({
   parser: require.resolve('babel-eslint'),
 });
 
-module.exports = new RuleTester();
+module.exports.ruleTester = new RuleTester();
+
+module.exports.ruleTesterWithSettings = new RuleTester({
+  settings: { workspaces: { search: { startDir: '/test', stopDir: '/' } } },
+});
