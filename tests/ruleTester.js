@@ -3,7 +3,8 @@
 const { RuleTester } = require('eslint');
 
 RuleTester.setDefaultConfig({
-  parser: require.resolve('babel-eslint'),
+  parser: require.resolve('@babel/eslint-parser'),
+  parserOptions: { requireConfigFile: false },
 });
 
 module.exports.ruleTester = new RuleTester();

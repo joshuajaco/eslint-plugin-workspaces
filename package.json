@@ -37,9 +37,9 @@
     "find-workspaces": "^0.0.1"
   },
   "devDependencies": {
+    "@babel/eslint-parser": "^7.16.3",
     "@joshuajaco/prettier-config": "^2.0.0",
-    "babel-eslint": "^10.1.0",
-    "eslint": "^7.32.0",
+    "eslint": "^8.2.0",
     "eslint-plugin-eslint-plugin": "^4.0.2",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^4.0.0",
