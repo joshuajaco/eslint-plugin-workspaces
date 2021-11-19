@@ -23,13 +23,10 @@
   "engines": {
     "node": ">=8.10.0"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/joshuajaco/eslint-plugin-workspaces.git"
-  },
+  "repository": "joshuajaco/eslint-plugin-workspaces",
   "prettier": "@joshuajaco/prettier-config",
   "scripts": {
-    "format": "prettier --write \"**/*.{js,json,md,yml}\" --ignore-path .gitignore",
+    "format": "prettier . -w --ignore-path .gitignore",
     "mocha": "mocha tests --recursive",
     "test": "yarn lint && nyc yarn mocha",
     "coverage": "mkdir -p coverage && touch ./coverage/lcov.info && nyc report --reporter=text-lcov > ./coverage/lcov.info",
