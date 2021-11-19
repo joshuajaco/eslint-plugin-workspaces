@@ -6,7 +6,7 @@ module.exports = {
     mocha: 1,
   },
   parserOptions: {
-    ecmaVersion: 2020,
+    ecmaVersion: 2021,
   },
   plugins: ['node', 'eslint-plugin', 'prettier'],
   extends: [
