@@ -23,15 +23,15 @@
   "engines": {
     "node": ">=8.10.0"
   },
+  "packageManager": "npm@8.1.4",
   "repository": "joshuajaco/eslint-plugin-workspaces",
   "prettier": "@joshuajaco/prettier-config",
   "scripts": {
     "format": "prettier . -w --ignore-path .gitignore",
-    "mocha": "mocha tests --recursive",
-    "test": "yarn lint && nyc yarn mocha",
+    "test": "npm run lint && nyc mocha tests --recursive",
     "coverage": "mkdir -p coverage && touch ./coverage/lcov.info && nyc report --reporter=text-lcov > ./coverage/lcov.info",
     "lint": "eslint . --ignore-path .gitignore",
-    "lint:fix": "yarn lint --fix"
+    "lint:fix": "npm run lint --fix"
   },
   "dependencies": {
     "find-workspaces": "^0.0.1"
