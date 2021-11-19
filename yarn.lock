@@ -921,8 +921,10 @@ find-up@^4.0.0, find-up@^4.1.0:
     locate-path "^5.0.0"
     path-exists "^4.0.0"
 
-"find-workspaces@file:../find-workspaces":
+find-workspaces@^0.0.1:
   version "0.0.1"
+  resolved "https://registry.yarnpkg.com/find-workspaces/-/find-workspaces-0.0.1.tgz#2b978041a326fcab83f7877ae9d024ce3f186531"
+  integrity sha512-/sjLiaPtLEGCPAQGVx8fr6Ez00qzFePlD/SQ6kr+RKK3ECPBDr/HCxTYC/Lk95n3VGqg/ZSuQaIGJxoRmwNaag==
   dependencies:
     globby "^11.0.4"
 

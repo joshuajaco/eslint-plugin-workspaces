@@ -28,7 +28,7 @@ module.exports = {
       'error',
       {
         pattern:
-          'https://github.com/joshuajaco/eslint-plugin-workspaces/blob/master/docs/rules/{{name}}.md',
+          'https://github.com/joshuajaco/eslint-plugin-workspaces/blob/main/docs/rules/{{name}}.md',
       },
     ],
     'prettier/prettier': 'error',
