@@ -3,7 +3,6 @@
   "version": "0.8.0-rc2",
   "main": "lib/index.js",
   "license": "MIT",
-  "author": "Joshua Jacobowitz <joshua.jacobowitz@yahoo.de>",
   "keywords": [
     "eslint",
     "eslintplugin",
@@ -28,10 +27,10 @@
   "prettier": "@joshuajaco/prettier-config",
   "scripts": {
     "format": "prettier . -w --ignore-path .gitignore",
-    "test": "npm run lint && nyc mocha tests --recursive",
-    "coverage": "mkdir -p coverage && touch ./coverage/lcov.info && nyc report --reporter=text-lcov > ./coverage/lcov.info",
     "lint": "eslint . --ignore-path .gitignore",
-    "lint:fix": "npm run lint --fix"
+    "lint:fix": "npm run lint -- --fix",
+    "test": "npm run lint && nyc mocha tests --recursive",
+    "coverage": "mkdir -p coverage && touch ./coverage/lcov.info && nyc report --reporter=text-lcov > ./coverage/lcov.info"
   },
   "dependencies": {
     "find-workspaces": "^0.0.2"
