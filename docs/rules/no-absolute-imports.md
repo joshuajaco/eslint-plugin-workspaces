@@ -19,16 +19,16 @@ Examples of **incorrect** code for this rule:
 
 ```js
 // inside "project/packages/A/index.js"
-import foo from '@project/A/foo';
+import foo from "@project/A/foo";
 ```
 
 Examples of **correct** code for this rule:
 
 ```js
 // inside "project/packages/A/index.js"
-import foo from './foo';
-import bar from '@project/B/bar';
+import foo from "./foo";
+import bar from "@project/B/bar";
 
 // inside "project/index.js"
-import foo from '.@project/A/foo';
+import foo from ".@project/A/foo";
 ```

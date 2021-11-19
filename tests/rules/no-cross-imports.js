@@ -1,61 +1,61 @@
-'use strict';
+"use strict";
 
-const { findWorkspaces } = require('find-workspaces');
-const { ruleTester } = require('../ruleTester');
-const { findWorkspacesMock } = require('../mocks');
-const rule = require('../../lib/rules/no-cross-imports');
+const { findWorkspaces } = require("find-workspaces");
+const { ruleTester } = require("../ruleTester");
+const { findWorkspacesMock } = require("../mocks");
+const rule = require("../../lib/rules/no-cross-imports");
 
-describe('no-cross-imports', () => {
+describe("no-cross-imports", () => {
   before(() => findWorkspaces.callsFake(findWorkspacesMock));
 
-  ruleTester.run('no-cross-imports', rule, {
+  ruleTester.run("no-cross-imports", rule, {
     valid: [
       "import module from 'module';",
       "require('module');",
       "import('module');",
       "import 'module';",
       "import '../some/relative/path';",
-      'someFunction();',
-      'let a;',
+      "someFunction();",
+      "let a;",
       {
-        options: [{ allow: '@test/workspace' }],
-        filename: '/some/path.js',
+        options: [{ allow: "@test/workspace" }],
+        filename: "/some/path.js",
         code: "import '@test/workspace';",
       },
       {
-        options: [{ allow: ['@test/workspace', '@test/another-workspace'] }],
-        filename: '/some/path.js',
+        options: [{ allow: ["@test/workspace", "@test/another-workspace"] }],
+        filename: "/some/path.js",
         code: "import '@test/workspace';import '@test/another-workspace';",
       },
       {
-        filename: '/test/workspace/test.js',
+        filename: "/test/workspace/test.js",
         code: "import '@test/workspace';",
       },
       {
-        filename: '/test/workspace/test.js',
+        filename: "/test/workspace/test.js",
         code: "import './some/thing'",
       },
       {
-        filename: '/test/workspace/test.js',
-        code: 'require(undefined)',
+        filename: "/test/workspace/test.js",
+        code: "require(undefined)",
       },
       {
-        filename: '/some/file.js',
+        filename: "/some/file.js",
         code: "import '@test/workspace';",
       },
       {
         options: [{ scopes: true }],
-        filename: '/test/scope/workspace/file.js',
+        filename: "/test/scope/workspace/file.js",
         code: "import '@test/shared-in-scope';",
       },
       {
         options: [{ scopes: { enable: true } }],
-        filename: '/test/scope/workspace/file.js',
+        filename: "/test/scope/workspace/file.js",
         code: "import '@test/shared-in-scope';",
       },
       {
-        options: [{ scopes: { enable: true, folderName: 'shared' } }],
-        filename: '/test/scope/workspace/file.js',
+        options: [{ scopes: { enable: true, folderName: "shared" } }],
+        filename: "/test/scope/workspace/file.js",
         code: "import '@test/shared-in-scope';",
       },
     ],
@@ -63,7 +63,7 @@ describe('no-cross-imports', () => {
     invalid: [
       {
         code: "import workspace from '@test/workspace';",
-        filename: '/test/another-workspace/test.js',
+        filename: "/test/another-workspace/test.js",
         errors: [
           {
             message: 'Import from package "@test/workspace" is not allowed',
@@ -72,7 +72,7 @@ describe('no-cross-imports', () => {
       },
       {
         code: "import('@test/workspace');",
-        filename: '/test/another-workspace/test.js',
+        filename: "/test/another-workspace/test.js",
         errors: [
           {
             message: 'Import from package "@test/workspace" is not allowed',
@@ -81,7 +81,7 @@ describe('no-cross-imports', () => {
       },
       {
         code: "const test = import('@test/workspace');",
-        filename: '/test/another-workspace/test.js',
+        filename: "/test/another-workspace/test.js",
         errors: [
           {
             message: 'Import from package "@test/workspace" is not allowed',
@@ -90,7 +90,7 @@ describe('no-cross-imports', () => {
       },
       {
         code: "async () => await import('@test/workspace');",
-        filename: '/test/another-workspace/test.js',
+        filename: "/test/another-workspace/test.js",
         errors: [
           {
             message: 'Import from package "@test/workspace" is not allowed',
@@ -99,7 +99,7 @@ describe('no-cross-imports', () => {
       },
       {
         code: "require('@test/workspace');",
-        filename: '/test/another-workspace/test.js',
+        filename: "/test/another-workspace/test.js",
         errors: [
           {
             message: 'Import from package "@test/workspace" is not allowed',
@@ -108,7 +108,7 @@ describe('no-cross-imports', () => {
       },
       {
         code: "const test = require('@test/workspace');",
-        filename: '/test/another-workspace/test.js',
+        filename: "/test/another-workspace/test.js",
         errors: [
           {
             message: 'Import from package "@test/workspace" is not allowed',
@@ -117,7 +117,7 @@ describe('no-cross-imports', () => {
       },
       {
         code: "import workspace from '@test/workspace';",
-        filename: '/test/another-workspace/test.js',
+        filename: "/test/another-workspace/test.js",
         errors: [
           {
             message: 'Import from package "@test/workspace" is not allowed',
@@ -126,7 +126,7 @@ describe('no-cross-imports', () => {
       },
       {
         code: "import '@test/workspace';",
-        filename: '/test/another-workspace/test.js',
+        filename: "/test/another-workspace/test.js",
         errors: [
           {
             message: 'Import from package "@test/workspace" is not allowed',
@@ -135,7 +135,7 @@ describe('no-cross-imports', () => {
       },
       {
         code: "import '@test/workspace/some/path';",
-        filename: '/test/another-workspace/test.js',
+        filename: "/test/another-workspace/test.js",
         errors: [
           {
             message: 'Import from package "@test/workspace" is not allowed',
@@ -144,7 +144,7 @@ describe('no-cross-imports', () => {
       },
       {
         code: "import '../../test/workspace';",
-        filename: '/test/another-workspace/test.js',
+        filename: "/test/another-workspace/test.js",
         errors: [
           {
             message: 'Import from package "@test/workspace" is not allowed',
@@ -153,7 +153,7 @@ describe('no-cross-imports', () => {
       },
       {
         code: "import '../../test/workspace/some/path';",
-        filename: '/test/another-workspace/test.js',
+        filename: "/test/another-workspace/test.js",
         errors: [
           {
             message: 'Import from package "@test/workspace" is not allowed',
@@ -162,7 +162,7 @@ describe('no-cross-imports', () => {
       },
       {
         code: "import '@test/workspace';import '@test/another-workspace';",
-        filename: '/test/third-workspace/test.js',
+        filename: "/test/third-workspace/test.js",
         errors: [
           {
             message: 'Import from package "@test/workspace" is not allowed',
@@ -175,8 +175,8 @@ describe('no-cross-imports', () => {
       },
       {
         code: "import '@test/workspace';import '@test/another-workspace';",
-        options: [{ allow: '@test/workspace' }],
-        filename: '/test/third-workspace/test.js',
+        options: [{ allow: "@test/workspace" }],
+        filename: "/test/third-workspace/test.js",
         errors: [
           {
             message:
@@ -185,8 +185,8 @@ describe('no-cross-imports', () => {
         ],
       },
       {
-        options: [{ allow: '@test/workspacetest' }],
-        filename: '/test/another-workspace/test.js',
+        options: [{ allow: "@test/workspacetest" }],
+        filename: "/test/another-workspace/test.js",
         code: "import '@test/workspace';",
         errors: [
           {
@@ -195,7 +195,7 @@ describe('no-cross-imports', () => {
         ],
       },
       {
-        filename: '/test/workspace/test.js',
+        filename: "/test/workspace/test.js",
         code: "import '../another-workspace/test'",
         errors: [
           {
@@ -206,7 +206,7 @@ describe('no-cross-imports', () => {
       },
       {
         options: [{ scopes: true }],
-        filename: '/test/scope/workspace/file.js',
+        filename: "/test/scope/workspace/file.js",
         code: "import '@test/shared-outside-scope';",
         errors: [
           {
@@ -216,7 +216,7 @@ describe('no-cross-imports', () => {
         ],
       },
       {
-        filename: '/test/scope/workspace/file.js',
+        filename: "/test/scope/workspace/file.js",
         code: "import '@test/shared-in-scope';",
         errors: [
           {
@@ -226,8 +226,8 @@ describe('no-cross-imports', () => {
         ],
       },
       {
-        options: [{ scopes: { enable: true, folderName: 'something-else' } }],
-        filename: '/test/scope/workspace/file.js',
+        options: [{ scopes: { enable: true, folderName: "something-else" } }],
+        filename: "/test/scope/workspace/file.js",
         code: "import '@test/shared-in-scope';",
         errors: [
           {
@@ -239,10 +239,10 @@ describe('no-cross-imports', () => {
     ],
   });
 
-  describe('without workspaces', () => {
+  describe("without workspaces", () => {
     before(() => findWorkspaces.callsFake(() => null));
 
-    ruleTester.run('no-cross-imports', rule, {
+    ruleTester.run("no-cross-imports", rule, {
       valid: ["import workspace from '@test/workspace';"],
       invalid: [],
     });

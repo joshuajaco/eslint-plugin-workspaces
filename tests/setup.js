@@ -1,5 +1,5 @@
-'use strict';
+"use strict";
 
-const sinon = require('sinon');
+const sinon = require("sinon");
 
-sinon.stub(require('find-workspaces'), 'findWorkspaces');
+sinon.stub(require("find-workspaces"), "findWorkspaces");

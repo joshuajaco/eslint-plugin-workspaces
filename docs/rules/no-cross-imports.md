@@ -31,8 +31,8 @@ Examples of **incorrect** code for this rule:
 
 ```js
 // inside "project/packages/A/index.js"
-import foo from '@project/B/foo';
-import bar from '../B/bar';
+import foo from "@project/B/foo";
+import bar from "../B/bar";
 ```
 
 Examples of **correct** code for this rule:
@@ -40,11 +40,11 @@ Examples of **correct** code for this rule:
 ```js
 // inside "project/packages/A/index.js"
 // configuration: [{ allow: "@project/B" }]
-import foo from '@project/B/foo';
-import bar from '../B/bar';
+import foo from "@project/B/foo";
+import bar from "../B/bar";
 
 // inside "project/index.js"
-import foo from './packages/B/foo';
+import foo from "./packages/B/foo";
 ```
 
 ### scopes
@@ -121,7 +121,7 @@ Examples of **incorrect** code for this rule:
 ```js
 // inside "project/packages/welcome-page/index.js"
 // configuration: [{ allow: "@project/user-management-shared", scopes: true }]
-import foo from '@project/user-management-shared';
+import foo from "@project/user-management-shared";
 ```
 
 Examples of **correct** code for this rule:
@@ -129,8 +129,8 @@ Examples of **correct** code for this rule:
 ```js
 // inside "project/packages/user-management/registration/index.js"
 // configuration: [{ allow: "@project/user-management-shared", scopes: true }]
-import foo from '@project/user-management-shared';
+import foo from "@project/user-management-shared";
 
 // inside "project/index.js"
-import foo from './packages/user-management/registration';
+import foo from "./packages/user-management/registration";
 ```

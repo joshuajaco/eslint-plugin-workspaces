@@ -18,8 +18,8 @@ Examples of **incorrect** code for this rule:
 
 ```js
 // inside "project/packages/A/index.js"
-import foo from '@project/B/foo';
-import bar from '../B/bar';
+import foo from "@project/B/foo";
+import bar from "../B/bar";
 ```
 
 Examples of **correct** code for this rule:
@@ -32,7 +32,7 @@ Examples of **correct** code for this rule:
 // }
 
 // inside "project/packages/A/index.js"
-import foo from '@project/B/foo';
-import bar from '../B/bar';
-import baz from '@project/C/baz';
+import foo from "@project/B/foo";
+import bar from "../B/bar";
+import baz from "@project/C/baz";
 ```
