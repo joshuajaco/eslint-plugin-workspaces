@@ -2,6 +2,7 @@
   "name": "eslint-plugin-workspaces",
   "version": "0.8.0-rc2",
   "main": "lib/index.js",
+  "exports": "./lib/index.js",
   "license": "MIT",
   "keywords": [
     "eslint",
