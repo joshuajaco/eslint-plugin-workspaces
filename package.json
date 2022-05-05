@@ -32,7 +32,7 @@
     "coverage": "mkdir -p coverage && touch ./coverage/lcov.info && nyc report --reporter=text-lcov > ./coverage/lcov.info"
   },
   "dependencies": {
-    "find-workspaces": "^0.0.2"
+    "find-workspaces": "^0.0.4"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.16.3",
