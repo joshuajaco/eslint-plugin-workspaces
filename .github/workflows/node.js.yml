@@ -10,7 +10,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest, windows-latest]
-        node-version: [17.1.0, 12.22.7]
+        node-version: [18.1.0, 12.22.12]
     steps:
       - name: Set git to use LF
         run: |
