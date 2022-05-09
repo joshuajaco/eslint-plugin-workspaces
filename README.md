@@ -1,4 +1,4 @@
-# eslint-plugin-workspaces [![Coverage Status](https://coveralls.io/repos/github/joshuajaco/eslint-plugin-workspaces/badge.svg)](https://coveralls.io/github/joshuajaco/eslint-plugin-workspaces) [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
+# eslint-plugin-workspaces ![npm downloads](https://img.shields.io/npm/dw/eslint-plugin-workspaces) [![Coverage Status](https://coveralls.io/repos/github/joshuajaco/eslint-plugin-workspaces/badge.svg)](https://coveralls.io/github/joshuajaco/eslint-plugin-workspaces) [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
 An ESLint plugin for enforcing consistent imports across monorepo packages.
 
