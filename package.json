@@ -1,9 +1,6 @@
 {
   "name": "eslint-plugin-workspaces",
   "version": "0.8.0-rc2",
-  "main": "lib/index.js",
-  "exports": "./lib/index.js",
-  "license": "MIT",
   "keywords": [
     "eslint",
     "eslintplugin",
@@ -14,36 +11,33 @@
     "yarn",
     "lerna"
   ],
+  "repository": "joshuajaco/eslint-plugin-workspaces",
+  "license": "MIT",
+  "exports": "./lib/index.js",
+  "main": "lib/index.js",
   "files": [
     "lib/",
-    "CHANGELOG.md",
-    "README.md",
-    "LICENSE"
+    "CHANGELOG.md"
   ],
-  "engines": {
-    "node": ">= 12.22.0"
-  },
-  "packageManager": "npm@8.9.0",
-  "repository": "joshuajaco/eslint-plugin-workspaces",
   "scripts": {
+    "coverage": "mkdir -p coverage && touch ./coverage/lcov.info && nyc report --reporter=text-lcov > ./coverage/lcov.info",
     "format": "prettier . -w --ignore-path .gitignore",
     "lint": "eslint . --ignore-path .gitignore",
     "lint:fix": "npm run lint -- --fix",
-    "test": "npm run lint && nyc mocha tests --recursive --file tests/setup.js",
-    "coverage": "mkdir -p coverage && touch ./coverage/lcov.info && nyc report --reporter=text-lcov > ./coverage/lcov.info"
+    "test": "npm run lint && nyc mocha tests --recursive --file tests/setup.js"
   },
   "dependencies": {
     "find-workspaces": "^0.0.4"
   },
   "devDependencies": {
-    "@babel/eslint-parser": "^7.17.0",
-    "eslint": "^8.14.0",
-    "eslint-plugin-eslint-plugin": "^4.1.0",
+    "@babel/eslint-parser": "^7.19.1",
+    "eslint": "^8.28.0",
+    "eslint-plugin-eslint-plugin": "^5.0.6",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-prettier": "^4.0.0",
-    "mocha": "^10.0.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "mocha": "^10.1.0",
     "nyc": "^15.1.0",
-    "prettier": "^2.6.2",
-    "sinon": "^13.0.2"
+    "prettier": "^2.8.0",
+    "sinon": "^14.0.2"
   }
 }
