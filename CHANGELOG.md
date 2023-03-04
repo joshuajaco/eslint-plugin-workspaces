@@ -1,3 +1,11 @@
+## [v0.8.0] - 2023-03-04
+
+- Replaced the underlying package to resolve monorepo packages (from [get-monorepo-packages](https://github.com/azz/get-monorepo-packages) to [find-workspaces](https://github.com/joshuajaco/find-workspaces)) which comes with a few benefits:
+  - [pnpm workspaces](https://pnpm.io/workspaces) support
+  - [bolt](https://github.com/boltpkg/bolt) support
+  - caching layer which allows this plugin to look for the workspaces root relative to the file that is being linted instead of the current working directory.  
+    This means you can run now eslint from outside a monorepo.
+
 ## [v0.7.0] - 2021-10-08
 
 - Fixed a bug where imports were incorrectly flagged as relative imports ([#11](https://github.com/joshuajaco/eslint-plugin-workspaces/issues/11))
@@ -23,6 +31,7 @@
 - Added [Scopes](https://github.com/joshuajaco/eslint-plugin-workspaces/blob/main/docs/rules/no-cross-imports.md#scopes) -- a way to partially allow imports across workspace boundaries ([@tobilen](https://github.com/tobilen) in [#8](https://github.com/joshuajaco/eslint-plugin-workspaces/pull/8))
 - Added this CHANGELOG file
 
+[v0.8.0]: https://github.com/joshuajaco/eslint-plugin-workspaces/compare/v0.7.0...v0.8.0
 [v0.7.0]: https://github.com/joshuajaco/eslint-plugin-workspaces/compare/v0.6.2...v0.7.0
 [v0.6.2]: https://github.com/joshuajaco/eslint-plugin-workspaces/compare/v0.6.1...v0.6.2
 [v0.6.1]: https://github.com/joshuajaco/eslint-plugin-workspaces/compare/v0.6.0...v0.6.1
