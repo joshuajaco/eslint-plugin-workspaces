@@ -9,7 +9,10 @@
     "packages",
     "workspaces",
     "yarn",
-    "lerna"
+    "lerna",
+    "npm",
+    "pnpm",
+    "bolt"
   ],
   "repository": "joshuajaco/eslint-plugin-workspaces",
   "license": "MIT",
