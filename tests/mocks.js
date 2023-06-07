@@ -21,6 +21,20 @@ module.exports.findWorkspacesMock = () => [
     },
   },
   {
+    location: "/test/peer-dependencies",
+    package: {
+      name: "@test/peer-dependencies",
+      peerDependencies: { "@test/peer-workspace": "^1.0.0" },
+    },
+  },
+  {
+    location: "/test/optional-dependencies",
+    package: {
+      name: "@test/optional-dependencies",
+      optionalDependencies: { "@test/optional-workspace": "^1.0.0" },
+    },
+  },
+  {
     location: "/test/scope/shared",
     package: {
       name: "@test/shared-in-scope",

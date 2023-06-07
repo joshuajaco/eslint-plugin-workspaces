@@ -22,6 +22,14 @@ describe("require-dependency", () => {
         filename: "/test/workspace/test.js",
         code: "require(undefined)",
       },
+      {
+        filename: "/test/peer-dependencies/test.js",
+        code: "import '@test/peer-workspace'",
+      },
+      {
+        filename: "/test/optional-dependencies/test.js",
+        code: "import '@test/optional-workspace'",
+      },
     ],
     invalid: [
       {
