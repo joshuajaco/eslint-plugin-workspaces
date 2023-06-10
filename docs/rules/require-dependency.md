@@ -1,6 +1,6 @@
 # workspaces/require-dependency
 
-Disallow importing from packages that are not listed as a dependency or devDependency in the package that is being imported to. This rule only affects files that are inside a package.
+Disallow importing from packages that are not listed in the dependencies, devDependencies, peerDependencies or optionalDependencies of the package that is being imported to. This rule only affects files that are inside a package.
 
 ## Example
 
