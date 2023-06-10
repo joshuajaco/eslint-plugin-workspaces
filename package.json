@@ -30,7 +30,7 @@
     "test": "npm run lint && nyc mocha tests --recursive --file tests/setup.js"
   },
   "dependencies": {
-    "find-workspaces": "^0.1.0"
+    "find-workspaces": "^0.2.0"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.19.1",
