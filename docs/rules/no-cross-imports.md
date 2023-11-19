@@ -47,7 +47,11 @@ import bar from "../B/bar";
 import foo from "./packages/B/foo";
 ```
 
-### scopes
+### scopes (**DEPRECATED**)
+
+> [!WARNING]  
+> This feature has been deprecated and will be removed in the next major version.  
+> For more information, see [Deprecating Scopes](../deprecating-scopes.md).
 
 Takes either a boolean or an options object. Defaults to `false`.
 
