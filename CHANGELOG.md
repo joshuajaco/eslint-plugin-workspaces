@@ -1,3 +1,11 @@
+# Changelog
+
+## [v0.10.0] - 2023-11-19
+
+- Updated to new Lerna defaults, see [Lerna v7 changelog](https://github.com/lerna/lerna/blob/main/CHANGELOG.md#breaking-changes)
+- Deprecated the [`scopes`](https://github.com/joshuajaco/eslint-plugin-workspaces/blob/main/docs/rules/no-cross-imports.md#scopes-deprecated) option of the [`workspaces/no-cross-imports`](https://github.com/joshuajaco/eslint-plugin-workspaces/blob/main/docs/rules/no-cross-imports.md) rule, it will be removed in the next major version.  
+  For more information, see [Deprecating Scopes](https://github.com/joshuajaco/eslint-plugin-workspaces/blob/main/docs/deprecating-scopes.md).
+
 ## [v0.9.0] - 2023-06-10
 
 - Added support for listing workspaces as `peerDependencies` & `optionalDependencies` (https://github.com/joshuajaco/eslint-plugin-workspaces/pull/25)
@@ -36,6 +44,7 @@
 - Added [Scopes](https://github.com/joshuajaco/eslint-plugin-workspaces/blob/main/docs/rules/no-cross-imports.md#scopes) -- a way to partially allow imports across workspace boundaries ([@tobilen](https://github.com/tobilen) in [#8](https://github.com/joshuajaco/eslint-plugin-workspaces/pull/8))
 - Added this CHANGELOG file
 
+[v0.10.0]: https://github.com/joshuajaco/eslint-plugin-workspaces/compare/v0.9.0...v0.10.0
 [v0.9.0]: https://github.com/joshuajaco/eslint-plugin-workspaces/compare/v0.8.0...v0.9.0
 [v0.8.0]: https://github.com/joshuajaco/eslint-plugin-workspaces/compare/v0.7.0...v0.8.0
 [v0.7.0]: https://github.com/joshuajaco/eslint-plugin-workspaces/compare/v0.6.2...v0.7.0

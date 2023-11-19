@@ -1,4 +1,4 @@
-# Deprecating scopes
+# Deprecating Scopes
 
 The [`scopes`](./rules/no-cross-imports.md#scopes-deprecated) option of the [`workspaces/no-cross-imports`](./rules/no-cross-imports.md) rule has been deprecated and will be removed in the next major version.  
 It was made with a specific use case in mind, but it turned out to be too inflexible and confusing.  
