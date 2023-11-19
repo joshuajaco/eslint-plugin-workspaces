@@ -1,23 +1,17 @@
-"use strict";
-
-module.exports = {
-  env: {
-    node: 1,
-    mocha: 1,
-  },
-  parserOptions: {
-    ecmaVersion: 2021,
-  },
-  plugins: ["node", "eslint-plugin", "prettier"],
-  extends: [
+{
+  "root": true,
+  "reportUnusedDisableDirectives": true,
+  "env": { "node": true, "mocha": true },
+  "plugins": ["node", "eslint-plugin"],
+  "extends": [
     "eslint:recommended",
     "plugin:node/recommended",
     "plugin:eslint-plugin/all",
+    "prettier"
   ],
-  rules: {
+  "rules": {
     "arrow-body-style": "error",
-    "no-use-before-define": "error",
-    strict: "error",
+    "strict": "error",
     "node/prefer-global/buffer": "error",
     "node/prefer-global/console": "error",
     "node/prefer-global/process": "error",
@@ -27,10 +21,8 @@ module.exports = {
     "eslint-plugin/require-meta-docs-url": [
       "error",
       {
-        pattern:
-          "https://github.com/joshuajaco/eslint-plugin-workspaces/blob/main/docs/rules/{{name}}.md",
-      },
-    ],
-    "prettier/prettier": "error",
-  },
-};
+        "pattern": "https://github.com/joshuajaco/eslint-plugin-workspaces/blob/main/docs/rules/{{name}}.md"
+      }
+    ]
+  }
+}
