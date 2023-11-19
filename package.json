@@ -27,7 +27,7 @@
     "format": "prettier -w .",
     "lint": "eslint . --ignore-path .gitignore",
     "lint:fix": "npm run lint -- --fix",
-    "test": "npm run lint && nyc mocha tests --recursive --file tests/setup.js"
+    "test": "nyc mocha tests --recursive --file tests/setup.js"
   },
   "dependencies": {
     "find-workspaces": "^0.2.0"
