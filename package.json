@@ -14,7 +14,10 @@
     "pnpm",
     "bolt"
   ],
-  "repository": "joshuajaco/eslint-plugin-workspaces",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joshuajaco/eslint-plugin-workspaces.git"
+  },
   "license": "MIT",
   "exports": "./lib/index.js",
   "main": "lib/index.js",
