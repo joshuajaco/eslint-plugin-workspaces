@@ -24,7 +24,7 @@
   ],
   "scripts": {
     "coverage": "mkdir -p coverage && touch ./coverage/lcov.info && nyc report --reporter=text-lcov > ./coverage/lcov.info",
-    "format": "prettier . -w --ignore-path .gitignore",
+    "format": "prettier -w .",
     "lint": "eslint . --ignore-path .gitignore",
     "lint:fix": "npm run lint -- --fix",
     "test": "npm run lint && nyc mocha tests --recursive --file tests/setup.js"
@@ -33,14 +33,14 @@
     "find-workspaces": "^0.2.0"
   },
   "devDependencies": {
-    "@babel/eslint-parser": "^7.22.5",
-    "eslint": "^8.42.0",
-    "eslint-plugin-eslint-plugin": "^5.1.0",
+    "@babel/eslint-parser": "^7.23.3",
+    "eslint": "^8.54.0",
+    "eslint-plugin-eslint-plugin": "^5.1.1",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-prettier": "^5.0.1",
     "mocha": "^10.2.0",
     "nyc": "^15.1.0",
-    "prettier": "^2.8.8",
-    "sinon": "^15.1.0"
+    "prettier": "^3.1.0",
+    "sinon": "^17.0.1"
   }
 }
