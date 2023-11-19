@@ -33,7 +33,7 @@
     "test": "nyc -r=lcov -r=text mocha tests --recursive --file tests/setup.js"
   },
   "dependencies": {
-    "find-workspaces": "^0.2.0"
+    "find-workspaces": "^0.3.0"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.23.3",
