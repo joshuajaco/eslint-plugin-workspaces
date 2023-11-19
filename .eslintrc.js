@@ -8,11 +8,12 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 2021,
   },
-  plugins: ["node", "eslint-plugin", "prettier"],
+  plugins: ["node", "eslint-plugin"],
   extends: [
     "eslint:recommended",
     "plugin:node/recommended",
     "plugin:eslint-plugin/all",
+    "prettier",
   ],
   rules: {
     "arrow-body-style": "error",
@@ -31,6 +32,5 @@ module.exports = {
           "https://github.com/joshuajaco/eslint-plugin-workspaces/blob/main/docs/rules/{{name}}.md",
       },
     ],
-    "prettier/prettier": "error",
   },
 };
