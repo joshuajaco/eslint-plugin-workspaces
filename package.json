@@ -23,9 +23,9 @@
     "CHANGELOG.md"
   ],
   "scripts": {
-    "format": "prettier -w .",
-    "format:check": "prettier -c .",
-    "lint": "eslint . --ignore-path .gitignore",
+    "format": "prettier . --write",
+    "format:check": "prettier . --check",
+    "lint": "eslint . --ignore-path=.gitignore --max-warnings=0",
     "lint:fix": "npm run lint -- --fix",
     "test": "nyc -r=lcov -r=text mocha tests --recursive --file tests/setup.js"
   },
