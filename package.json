@@ -23,11 +23,10 @@
     "CHANGELOG.md"
   ],
   "scripts": {
-    "coverage": "mkdir -p coverage && touch ./coverage/lcov.info && nyc report --reporter=text-lcov > ./coverage/lcov.info",
     "format": "prettier -w .",
     "lint": "eslint . --ignore-path .gitignore",
     "lint:fix": "npm run lint -- --fix",
-    "test": "nyc mocha tests --recursive --file tests/setup.js"
+    "test": "nyc -r=lcov -r=text mocha tests --recursive --file tests/setup.js"
   },
   "dependencies": {
     "find-workspaces": "^0.2.0"
