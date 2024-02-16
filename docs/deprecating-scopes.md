@@ -35,7 +35,7 @@ Inside `project/.eslintrc.json`:
   // ...
   "rules": {
     // ...
-    "workspaces/no-cross-imports": "error"
+    "workspaces/no-cross-imports": "error",
   },
   "overrides": [
     {
@@ -43,11 +43,11 @@ Inside `project/.eslintrc.json`:
       "rules": {
         "workspaces/no-cross-imports": [
           "error",
-          { "allow": ["@project/user-management-shared"] }
-        ]
-      }
-    }
-  ]
+          { "allow": ["@project/user-management-shared"] },
+        ],
+      },
+    },
+  ],
 }
 ```
 
@@ -82,8 +82,8 @@ Inside `project/.eslintrc.json`:
   // ...
   "rules": {
     // ...
-    "workspaces/no-cross-imports": "error"
-  }
+    "workspaces/no-cross-imports": "error",
+  },
 }
 ```
 
@@ -94,8 +94,8 @@ Inside `project/packages/user-management/.eslintrc.json`:
   "rules": {
     "workspaces/no-cross-imports": [
       "error",
-      { "allow": ["@project/user-management-shared"] }
-    ]
-  }
+      { "allow": ["@project/user-management-shared"] },
+    ],
+  },
 }
 ```
