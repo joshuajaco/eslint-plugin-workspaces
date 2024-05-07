@@ -1,5 +1,9 @@
 # Changelog
 
+## [v0.10.1] - 2024-05-07
+
+- Fixed an issue where importing a local file with the same name as a workspace would be detected as a workspace import (https://github.com/joshuajaco/eslint-plugin-workspaces/issues/32)
+
 ## [v0.10.0] - 2023-11-19
 
 - Updated to new Lerna defaults, see [Lerna v7 changelog](https://github.com/lerna/lerna/blob/main/CHANGELOG.md#breaking-changes)
@@ -44,6 +48,7 @@
 - Added [Scopes](https://github.com/joshuajaco/eslint-plugin-workspaces/blob/main/docs/rules/no-cross-imports.md#scopes) -- a way to partially allow imports across workspace boundaries ([@tobilen](https://github.com/tobilen) in [#8](https://github.com/joshuajaco/eslint-plugin-workspaces/pull/8))
 - Added this CHANGELOG file
 
+[v0.10.1]: https://github.com/joshuajaco/eslint-plugin-workspaces/compare/v0.10.0...v0.10.1
 [v0.10.0]: https://github.com/joshuajaco/eslint-plugin-workspaces/compare/v0.9.0...v0.10.0
 [v0.9.0]: https://github.com/joshuajaco/eslint-plugin-workspaces/compare/v0.8.0...v0.9.0
 [v0.8.0]: https://github.com/joshuajaco/eslint-plugin-workspaces/compare/v0.7.0...v0.8.0
