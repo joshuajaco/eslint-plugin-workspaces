@@ -40,6 +40,10 @@ describe("no-absolute-imports", () => {
         code: "import workspace from '@test/workspace';",
         filename: "/some/path.js",
       },
+      {
+        filename: "/test/no-npm-scope-workspace/index.js",
+        code: "import './no-npm-scope-workspace';",
+      },
     ],
 
     invalid: [

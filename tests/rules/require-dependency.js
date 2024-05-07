@@ -30,6 +30,10 @@ describe("require-dependency", () => {
         filename: "/test/optional-dependencies/test.js",
         code: "import '@test/optional-workspace'",
       },
+      {
+        filename: "/test/workspace/index.js",
+        code: "import './no-npm-scope-workspace';",
+      },
     ],
     invalid: [
       {

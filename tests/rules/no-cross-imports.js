@@ -58,6 +58,10 @@ describe("no-cross-imports", () => {
         filename: "/test/scope/workspace/file.js",
         code: "import '@test/shared-in-scope';",
       },
+      {
+        filename: "/test/workspace/index.js",
+        code: "import './no-npm-scope-workspace';",
+      },
     ],
 
     invalid: [
