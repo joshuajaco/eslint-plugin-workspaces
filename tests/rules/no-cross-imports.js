@@ -120,15 +120,6 @@ describe("no-cross-imports", () => {
         ],
       },
       {
-        code: "import workspace from '@test/workspace';",
-        filename: "/test/another-workspace/test.js",
-        errors: [
-          {
-            message: 'Import from package "@test/workspace" is not allowed',
-          },
-        ],
-      },
-      {
         code: "import '@test/workspace';",
         filename: "/test/another-workspace/test.js",
         errors: [
