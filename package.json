@@ -28,7 +28,7 @@
   "scripts": {
     "format": "prettier . --write",
     "format:check": "prettier . --check",
-    "lint": "eslint . --ignore-path=.gitignore --max-warnings=0",
+    "lint": "eslint . --max-warnings=0",
     "lint:fix": "npm run lint -- --fix",
     "test": "nyc -r=lcov -r=text mocha tests --recursive --file tests/setup.js"
   },
@@ -36,15 +36,16 @@
     "find-workspaces": "^0.3.1"
   },
   "devDependencies": {
-    "@babel/eslint-parser": "^7.25.0",
-    "eslint": "^8.56.0",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-eslint-plugin": "^6.2.0",
-    "eslint-plugin-node": "^11.1.0",
-    "mocha": "^10.7.0",
-    "nyc": "^17.0.0",
-    "prettier": "^3.3.3",
-    "sinon": "^18.0.0"
+    "@eslint/js": "^9.27.0",
+    "eslint": "^9.27.0",
+    "eslint-config-prettier": "^10.1.5",
+    "eslint-plugin-eslint-plugin": "^6.4.0",
+    "eslint-plugin-n": "^17.18.0",
+    "globals": "^16.1.0",
+    "mocha": "^11.3.0",
+    "nyc": "^17.1.0",
+    "prettier": "^3.5.3",
+    "sinon": "^20.0.0"
   },
-  "packageManager": "pnpm@9.6.0"
+  "packageManager": "pnpm@10.11.0"
 }
