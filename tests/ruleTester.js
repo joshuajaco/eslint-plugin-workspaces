@@ -2,10 +2,7 @@
 
 const { RuleTester } = require("eslint");
 
-RuleTester.setDefaultConfig({
-  parser: require.resolve("@babel/eslint-parser"),
-  parserOptions: { requireConfigFile: false },
-});
+RuleTester.setDefaultConfig({});
 
 module.exports.ruleTester = new RuleTester();
 
