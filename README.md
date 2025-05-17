@@ -42,6 +42,36 @@ Or add the "recommended" preset:
 }
 ```
 
+### ESLint v9 Flat Config
+
+Enable the rules in your ESLint configuration file:
+
+```js
+import workspaces from "eslint-plugin-workspaces";
+
+export default [
+  {
+    plugins: { workspaces },
+    rules: {
+      "workspaces/no-relative-imports": "error",
+      "workspaces/require-dependency": "warn",
+    },
+  },
+  // ...
+];
+```
+
+Or add the "recommended" preset:
+
+```js
+import workspaces from "eslint-plugin-workspaces";
+
+export default [
+  workspaces.configs["flat/recommended"],
+  // ...
+];
+```
+
 ## Rules
 
 ✔ included in the "recommended" preset
@@ -59,6 +89,8 @@ Or add the "recommended" preset:
 
 - `recommended` enables rules recommended for all users
 - `all` enables all rules
+- `flat/recommended` enables rules recommended for all users
+- `flat/all` enables all rules
 
 # License
 
