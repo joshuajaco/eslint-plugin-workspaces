@@ -44,6 +44,14 @@ describe("no-absolute-imports", () => {
         filename: "/test/no-npm-scope-workspace/index.js",
         code: "import './no-npm-scope-workspace';",
       },
+      {
+        filename: "/test/outer/index.js",
+        code: "import '@test/inner';",
+      },
+      {
+        filename: "/test/outer/inner/index.js",
+        code: "import '@test/outer';",
+      },
     ],
 
     invalid: [
