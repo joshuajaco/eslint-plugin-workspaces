@@ -39,17 +39,17 @@
     "find-workspaces": "^0.3.1"
   },
   "devDependencies": {
-    "@eslint/js": "^9.27.0",
-    "eslint": "^9.27.0",
-    "eslint-config-prettier": "^10.1.5",
-    "eslint-plugin-eslint-plugin": "^6.4.0",
-    "eslint-plugin-n": "^17.18.0",
+    "@eslint/js": "^9.39.2",
+    "eslint": "^9.39.2",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-eslint-plugin": "^6.5.0",
+    "eslint-plugin-n": "^17.23.1",
     "eslint8": "npm:eslint@8.57.1",
-    "globals": "^16.1.0",
-    "mocha": "^11.3.0",
+    "globals": "^16.5.0",
+    "mocha": "^11.7.5",
     "nyc": "^17.1.0",
-    "prettier": "^3.5.3",
+    "prettier": "^3.7.4",
     "sinon": "^20.0.0"
   },
-  "packageManager": "pnpm@10.11.0"
+  "packageManager": "pnpm@10.25.0"
 }
