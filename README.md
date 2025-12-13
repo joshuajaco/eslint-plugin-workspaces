@@ -80,10 +80,10 @@ export default [
 
 |     |     | Name                                                                                                                      | Description                                                                |
 | --- | --- | ------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
-| ✔  | 🔧  | [no-absolute-imports](https://github.com/joshuajaco/eslint-plugin-workspaces/blob/main/docs/rules/no-absolute-imports.md) | disallow absolute imports for files that are within the current package    |
+| ✔   | 🔧  | [no-absolute-imports](https://github.com/joshuajaco/eslint-plugin-workspaces/blob/main/docs/rules/no-absolute-imports.md) | disallow absolute imports for files that are within the current package    |
 |     |     | [no-cross-imports](https://github.com/joshuajaco/eslint-plugin-workspaces/blob/main/docs/rules/no-cross-imports.md)       | disallow imports of files that are inside another package                  |
-| ✔  | 🔧  | [no-relative-imports](https://github.com/joshuajaco/eslint-plugin-workspaces/blob/main/docs/rules/no-relative-imports.md) | disallow relative imports of files that are outside of the current package |
-| ✔  |     | [require-dependency](https://github.com/joshuajaco/eslint-plugin-workspaces/blob/main/docs/rules/require-dependency.md)   | disallow importing from packages that are not listed as a dependency       |
+| ✔   | 🔧  | [no-relative-imports](https://github.com/joshuajaco/eslint-plugin-workspaces/blob/main/docs/rules/no-relative-imports.md) | disallow relative imports of files that are outside of the current package |
+| ✔   |     | [require-dependency](https://github.com/joshuajaco/eslint-plugin-workspaces/blob/main/docs/rules/require-dependency.md)   | disallow importing from packages that are not listed as a dependency       |
 
 ## Presets
 
