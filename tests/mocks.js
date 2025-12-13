@@ -21,6 +21,18 @@ module.exports.findWorkspacesMock = () => [
     },
   },
   {
+    location: "/test/outer",
+    package: {
+      name: "@test/outer",
+    },
+  },
+  {
+    location: "/test/outer/inner",
+    package: {
+      name: "@test/inner",
+    },
+  },
+  {
     location: "/test/no-npm-scope-workspace",
     package: {
       name: "no-npm-scope-workspace",

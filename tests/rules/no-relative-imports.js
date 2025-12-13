@@ -44,6 +44,14 @@ describe("no-relative-imports", () => {
         filename: "/test/workspace/index.js",
         code: "import './no-npm-scope-workspace';",
       },
+      {
+        filename: "/test/outer/index.js",
+        code: "import './utils.js';",
+      },
+      {
+        filename: "/test/outer/inner/index.js",
+        code: "import './utils.js';",
+      },
     ],
     invalid: [
       {
