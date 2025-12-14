@@ -1,5 +1,9 @@
 # Changelog
 
+## [v0.11.1] - 2025-12-14
+
+- Fixed an issue where rules were incorrectly applied for nested workspace packages ([#42](https://github.com/joshuajaco/eslint-plugin-workspaces/issues/42))
+
 ## [v0.11.0] - 2025-05-17
 
 - Added ESLint v9 flat configuration presets, see [docs](https://github.com/joshuajaco/eslint-plugin-workspaces/blob/v0.11.0/README.md#eslint-v9-flat-config)
@@ -53,6 +57,7 @@
 - Added [Scopes](https://github.com/joshuajaco/eslint-plugin-workspaces/blob/main/docs/rules/no-cross-imports.md#scopes) -- a way to partially allow imports across workspace boundaries ([@tobilen](https://github.com/tobilen) in [#8](https://github.com/joshuajaco/eslint-plugin-workspaces/pull/8))
 - Added this CHANGELOG file
 
+[v0.11.1]: https://github.com/joshuajaco/eslint-plugin-workspaces/compare/v0.11.0...v0.11.1
 [v0.11.0]: https://github.com/joshuajaco/eslint-plugin-workspaces/compare/v0.10.1...v0.11.0
 [v0.10.1]: https://github.com/joshuajaco/eslint-plugin-workspaces/compare/v0.10.0...v0.10.1
 [v0.10.0]: https://github.com/joshuajaco/eslint-plugin-workspaces/compare/v0.9.0...v0.10.0
