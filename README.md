@@ -48,7 +48,7 @@ Or add the "recommended" preset:
 import workspaces from "eslint-plugin-workspaces";
 
 export default [
-  workspaces.configs["flat/recommended"],
+  workspaces.configs.recommended,
   // ...
 ];
 ```
@@ -71,7 +71,7 @@ Or add the "recommended" preset:
 
 ```json5
 {
-  extends: ["plugin:workspaces/recommended"],
+  extends: ["plugin:workspaces/legacy-recommended"],
 }
 ```
 
@@ -92,8 +92,10 @@ Or add the "recommended" preset:
 
 - `recommended` enables rules recommended for all users
 - `all` enables all rules
-- `flat/recommended` enables rules recommended for all users
-- `flat/all` enables all rules
+- `legacy-recommended` same as `recommended` but for eslintrc format
+- `legacy-all` same as `all` but for eslintrc format
+- `flat/recommended` (**DEPRECATED**) alias for `recommended`
+- `flat/all` (**DEPRECATED**) alias for `all`
 
 # License
 

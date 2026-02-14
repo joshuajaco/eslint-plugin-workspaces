@@ -28,14 +28,25 @@ describe("eslint 10", () => {
     return lintFiles(new ESLint10({ cwd, baseConfig }));
   }
 
-  it("flat/recommended", async () => {
-    const messages = await runLint(plugin.configs["flat/recommended"]);
+  it("recommended", async () => {
+    const messages = await runLint(plugin.configs.recommended);
     assert.deepStrictEqual(messages, normalizeMessages(snapshot.recommended));
   });
 
-  it("flat/all", async () => {
-    const messages = await runLint(plugin.configs["flat/all"]);
+  it("all", async () => {
+    const messages = await runLint(plugin.configs.all);
     assert.deepStrictEqual(messages, normalizeMessages(snapshot.all));
+  });
+
+  it("flat/recommended", async () => {
+    assert.equal(
+      plugin.configs["flat/recommended"],
+      plugin.configs.recommended,
+    );
+  });
+
+  it("flat/all", async () => {
+    assert.equal(plugin.configs["flat/all"], plugin.configs.all);
   });
 });
 
@@ -44,13 +55,13 @@ describe("eslint 9", () => {
     return lintFiles(new ESLint9({ cwd, baseConfig }));
   }
 
-  it("flat/recommended", async () => {
-    const messages = await runLint(plugin.configs["flat/recommended"]);
+  it("recommended", async () => {
+    const messages = await runLint(plugin.configs.recommended);
     assert.deepStrictEqual(messages, snapshot.recommended);
   });
 
-  it("flat/all", async () => {
-    const messages = await runLint(plugin.configs["flat/all"]);
+  it("all", async () => {
+    const messages = await runLint(plugin.configs.all);
     assert.deepStrictEqual(messages, snapshot.all);
   });
 });
@@ -66,13 +77,13 @@ describe("eslint 8", () => {
     );
   }
 
-  it("recommended", async () => {
-    const messages = await runLint(plugin.configs.recommended);
+  it("legacy-recommended", async () => {
+    const messages = await runLint(plugin.configs["legacy-recommended"]);
     assert.deepStrictEqual(messages, snapshot.recommended);
   });
 
-  it("all", async () => {
-    const messages = await runLint(plugin.configs.all);
+  it("legacy-all", async () => {
+    const messages = await runLint(plugin.configs["legacy-all"]);
     assert.deepStrictEqual(messages, snapshot.all);
   });
 });
