@@ -1,5 +1,12 @@
 # Changelog
 
+## [v0.12.0] - 2026-02-14
+
+- **BREAKING**: Dropped support for ESLint versions lower than `8.40.0`
+- **BREAKING**: The `recommended` and `all` presets now uses the new ESLint flat config format
+- Added `legacy-recommended` and `legacy-all` presets using the legacy eslintrc format
+- Deprecated `flat/recommended` and `flat/all` presets in favor of `recommended` and `all`, they will be removed in the next major version
+
 ## [v0.11.1] - 2025-12-14
 
 - Fixed an issue where rules were incorrectly applied for nested workspace packages ([#42](https://github.com/joshuajaco/eslint-plugin-workspaces/issues/42))
@@ -57,6 +64,7 @@
 - Added [Scopes](https://github.com/joshuajaco/eslint-plugin-workspaces/blob/main/docs/rules/no-cross-imports.md#scopes) -- a way to partially allow imports across workspace boundaries ([@tobilen](https://github.com/tobilen) in [#8](https://github.com/joshuajaco/eslint-plugin-workspaces/pull/8))
 - Added this CHANGELOG file
 
+[v0.12.0]: https://github.com/joshuajaco/eslint-plugin-workspaces/compare/v0.11.1...v0.12.0
 [v0.11.1]: https://github.com/joshuajaco/eslint-plugin-workspaces/compare/v0.11.0...v0.11.1
 [v0.11.0]: https://github.com/joshuajaco/eslint-plugin-workspaces/compare/v0.10.1...v0.11.0
 [v0.10.1]: https://github.com/joshuajaco/eslint-plugin-workspaces/compare/v0.10.0...v0.10.1
