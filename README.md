@@ -14,10 +14,13 @@ It supports:
 
 ```sh
 # npm
-npm install eslint-plugin-workspaces --save-dev
+npm i -D eslint-plugin-workspaces
+
+#pnpm
+pnpm add -D eslint-plugin-workspaces
 
 # yarn
-yarn add eslint-plugin-workspaces --dev
+yarn add -D eslint-plugin-workspaces
 ```
 
 ## Configuration
