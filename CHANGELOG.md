@@ -3,8 +3,9 @@
 ## [v0.12.0] - 2026-02-14
 
 - **BREAKING**: Dropped support for ESLint versions lower than `8.40.0`
-- **BREAKING**: The `recommended` and `all` presets now uses the new ESLint flat config format
+- **BREAKING**: Migrated the `recommended` and `all` presets to use the new ESLint flat config format
 - Added `legacy-recommended` and `legacy-all` presets using the legacy eslintrc format
+- Added ESLint v10 support
 - Deprecated `flat/recommended` and `flat/all` presets in favor of `recommended` and `all`, they will be removed in the next major version
 
 ## [v0.11.1] - 2025-12-14
