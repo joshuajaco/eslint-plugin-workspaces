@@ -52,5 +52,8 @@
     "prettier": "^3.7.4",
     "sinon": "^20.0.0"
   },
+  "peerDependencies": {
+    "eslint": ">=8.40.0"
+  },
   "packageManager": "pnpm@10.25.0"
 }
