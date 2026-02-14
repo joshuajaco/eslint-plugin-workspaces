@@ -8,7 +8,7 @@ export default [
   { ignores: ["tests/e2e/fixtures"] },
   js.configs.recommended,
   node.configs["flat/recommended"],
-  eslintPlugin.configs["flat/all"],
+  eslintPlugin.configs.all,
   {
     linterOptions: { reportUnusedDisableDirectives: true },
     rules: {
