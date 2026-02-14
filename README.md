@@ -25,29 +25,7 @@ yarn add -D eslint-plugin-workspaces
 
 ## Configuration
 
-Enable the rules in your ESLint configuration file:
-
-```json
-{
-  "plugins": ["workspaces"],
-  "rules": {
-    "workspaces/no-relative-imports": "error",
-    "workspaces/require-dependency": "warn"
-  }
-}
-```
-
-Or add the "recommended" preset:
-
-```json
-{
-  "extends": ["plugin:workspaces/recommended"]
-}
-```
-
-### ESLint v9 Flat Config
-
-Enable the rules in your ESLint configuration file:
+Enable the rules in your `eslint.config.js` file:
 
 ```js
 import workspaces from "eslint-plugin-workspaces";
@@ -73,6 +51,28 @@ export default [
   workspaces.configs["flat/recommended"],
   // ...
 ];
+```
+
+### ESLint v8 RC Config
+
+Enable the rules in your `.eslintrc.json` file:
+
+```json5
+{
+  plugins: ["workspaces"],
+  rules: {
+    "workspaces/no-relative-imports": "error",
+    "workspaces/require-dependency": "warn",
+  },
+}
+```
+
+Or add the "recommended" preset:
+
+```json5
+{
+  extends: ["plugin:workspaces/recommended"],
+}
 ```
 
 ## Rules
