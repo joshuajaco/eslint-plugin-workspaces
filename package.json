@@ -8,10 +8,11 @@
     "monorepo",
     "packages",
     "workspaces",
-    "yarn",
-    "lerna",
     "npm",
     "pnpm",
+    "yarn",
+    "bun",
+    "lerna",
     "bolt"
   ],
   "repository": {

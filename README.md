@@ -4,9 +4,10 @@ An ESLint plugin for enforcing consistent imports across monorepo packages.
 
 It supports:
 
-- [Yarn workspaces](https://classic.yarnpkg.com/en/docs/workspaces)
-- [npm workspaces](https://docs.npmjs.com/cli/v7/using-npm/workspaces)
-- [pnpm workspaces](https://pnpm.io/workspaces)
+- [npm](https://docs.npmjs.com/cli/using-npm/workspaces)
+- [pnpm](https://pnpm.io/workspaces)
+- [yarn](https://yarnpkg.com/features/workspaces)
+- [bun](https://bun.com/docs/pm/workspaces)
 - [lerna](https://github.com/lerna/lerna)
 - [bolt](https://github.com/boltpkg/bolt)
 
