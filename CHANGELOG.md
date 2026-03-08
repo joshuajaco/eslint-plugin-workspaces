@@ -1,5 +1,11 @@
 # Changelog
 
+## [v0.12.1] - 2026-03-08
+
+- Fixed sub path checking when running eslint from a workspace directory ([#45](https://github.com/joshuajaco/eslint-plugin-workspaces/issues/45)).  
+  This only affected the `workspaces/require-dependency` and the `workspaces/no-cross-imports` rule.
+- Fixed the console color not being reset after a deprecation message was shown.
+
 ## [v0.12.0] - 2026-02-14
 
 - **BREAKING**: Dropped support for ESLint versions lower than `8.40.0`
@@ -65,6 +71,7 @@
 - Added [Scopes](https://github.com/joshuajaco/eslint-plugin-workspaces/blob/main/docs/rules/no-cross-imports.md#scopes) -- a way to partially allow imports across workspace boundaries ([@tobilen](https://github.com/tobilen) in [#8](https://github.com/joshuajaco/eslint-plugin-workspaces/pull/8))
 - Added this CHANGELOG file
 
+[v0.12.1]: https://github.com/joshuajaco/eslint-plugin-workspaces/compare/v0.12.0...v0.12.1
 [v0.12.0]: https://github.com/joshuajaco/eslint-plugin-workspaces/compare/v0.11.1...v0.12.0
 [v0.11.1]: https://github.com/joshuajaco/eslint-plugin-workspaces/compare/v0.11.0...v0.11.1
 [v0.11.0]: https://github.com/joshuajaco/eslint-plugin-workspaces/compare/v0.10.1...v0.11.0
